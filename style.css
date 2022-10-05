@@ -98,14 +98,13 @@ body {
 /*Dropdown Nav */
 .menu-item ul{
   list-style: none;
- width: inherit;
 }
+
 .nav_list_item,
 .menu-item {
   position: relative; 
   padding: 1rem;
 }
-
  
 .nav_list_item:hover ul,
 .nav_list_item:focus ul,
@@ -131,7 +130,6 @@ body {
 
 .nav_list_drop li {
   padding: 0.2rem;
-  
 }
 
 /* Bottom line animation */
@@ -157,6 +155,7 @@ body {
   transition-duration: 0.4s;
 }
 
+/*Sections*/
 section {
   display: flex;
   flex-direction: column;
@@ -167,6 +166,10 @@ section {
   min-height: 100vh;
   /*scroll-snap-align:  center;*/
   position: relative;
+}
+
+.simple a {
+  text-decoration: none;
 }
 
 section .section-footer {
@@ -258,6 +261,21 @@ input[type="text"] {
   padding: 3vw;
   margin: 5vw;
 }
+
+.blog-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.note-basic {
+  width: 50%;
+}
+.note-equations {
+  width: 50%;
+}
+
+
 
 .blog pre {
   text-align: left;
