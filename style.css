@@ -65,7 +65,6 @@ body {
 
 .logo img {
   width: 100%;
-  border-bottom: 1px solid black;
 }
 
 .menu .menu-item a {
@@ -74,42 +73,49 @@ body {
 }
 
 /*Dropdown Nav */
-.menu-item ul{
-  list-style: none;
-}
-
 .menu-item {
   position: relative; 
   padding: 1rem;
 }
-
-.menu-item:hover ul,
-.menu-item:focus ul {
+/*
+.menu-item:hover table,
+.menu-item:focus table {
   opacity: 1;
   visibility: visible;
-}
+}*/
 
 .nav_list_drop {
   position: absolute;
-  display: flex;
-  flex-direction: column;  
-  background: #00162C;
+  text-align: left;
+  line-height: 1em;
+  background: rgba(0, 0, 0, 0.807);
   padding: 0.7rem 0;
   border-radius: 2px;
-  width: 120%;
+  width: auto;
   z-index: 5;
-  opacity: 0;
-  visibility: hidden;
+ /* opacity: 0;
+  visibility: hidden;*/
   transition: opacity 200ms ease-in-out;
 }
 
-.nav_list_drop li {
-  padding: 0.2rem;
+table.nav_list_drop {
+  border-spacing: 0px 10px;
+  border-collapse: separate;
+}
+
+table.nav_list_drop a {
+  cursor: pointer;
+}
+.nav_list_drop th, .nav_list_drop td {
+  padding: 0.2rem 0.6rem 0.2rem 0.2rem;
+}
+.nav_list_drop th {
+  border-right: solid 1px #f4f4f4;
 }
 
 /* Bottom line animation */
 .menu .menu-item a::after,
-.nav_list_drop li a::after{
+.nav_list_drop th::after{
   content: "";
   position: absolute;
   bottom: 0;
@@ -122,8 +128,7 @@ body {
   transform-origin: right center;
 }
 .menu .menu-item a:hover::after,
-.navbar ul li a:hover::after,
-.nav_list_drop li a:hover::after {
+.nav_list_drop th:hover::after {
   transform: scaleX(1);
   transform-origin: left center;
   transition-duration: 0.4s;
@@ -147,6 +152,7 @@ section {
   display: flex;
   flex-direction: row;
 }
+
 table.theory-subjects{
   margin: 30px auto 0 auto;
   display: block;
