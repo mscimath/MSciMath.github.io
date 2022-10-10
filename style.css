@@ -77,12 +77,12 @@ body {
   position: relative; 
   padding: 1rem;
 }
-/*
+
 .menu-item:hover table,
 .menu-item:focus table {
   opacity: 1;
   visibility: visible;
-}*/
+}
 
 .nav_list_drop {
   position: absolute;
@@ -93,8 +93,8 @@ body {
   border-radius: 2px;
   width: auto;
   z-index: 5;
- /* opacity: 0;
-  visibility: hidden;*/
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 200ms ease-in-out;
 }
 
@@ -112,10 +112,17 @@ table.nav_list_drop a {
 .nav_list_drop th {
   border-right: solid 1px #f4f4f4;
 }
+.nav_list_drop td a {
+  transition: all 400ms;
+}
+
+/*
+.nav_list_drop td a:hover {
+  color: rgb(187, 221, 210);
+}*/
 
 /* Bottom line animation */
-.menu .menu-item a::after,
-.nav_list_drop th::after{
+.menu .menu-item > a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -127,12 +134,12 @@ table.nav_list_drop a {
   transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   transform-origin: right center;
 }
-.menu .menu-item a:hover::after,
-.nav_list_drop th:hover::after {
+.menu .menu-item > a:hover::after {
   transform: scaleX(1);
   transform-origin: left center;
   transition-duration: 0.4s;
 }
+
 
 /*Sections*/
 section {
