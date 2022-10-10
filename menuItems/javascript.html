@@ -19,7 +19,7 @@
             <div class="menu-item">
               <a href="../index.html">Home</a>
             </div>
-            <div class="menu-item"><a href="#about">About</a></div>
+            <div class="menu-item"><a href="#theory">Theory</a></div>
             <div class="menu-item">
               <a href="#subjects">Subjects</a>
 		          <ul class="nav_list_drop">
@@ -56,9 +56,102 @@
         <p>lorem lorem</p>
         <div class="section-footer"></div>
       </section>
-      <section class="simple" id="about">
-        <h1>Science & Maths Site</h1>
-        <p>lorem lorem</p>
+      <section class="simple" id="theory">
+        <div class="section-title">
+          <h1>JavaScript in Theory</h1>
+          <p>Examples with Full Solutions</p>
+        </div>
+        <div class="section-content">
+          <table class="theory-subjects">
+            <tr>              
+              <th>JavaScript DOM</th>
+            </tr>
+            <tr>
+              <td><a href="strona/3421.html"><img src="../img/listPointLight.png">trygonometria</a></td>
+            </tr>
+            <tr>
+              <td><a href="strona/3422.html"><img src="../img/listPointLight.png">geometria na płaszczyźnie</a></td>
+            </tr>
+            <tr>
+              <td><a href="#"><img src="../img/listPointLight.png">Events</a></td>
+            </tr>          
+            <tr>
+              <td><a href="strona/3424.html"><img src="../img/listPointLight.png">geometria w przestrzeni</a></td>
+            </tr>     
+            <tr>
+              <td><a href="strona/3425.html"><img src="../img/listPointLight.png">kombinatoryka</a></td>
+            </tr>       
+            <tr>
+              <td><a href="strona/3426.html"><img src="../img/listPointLight.png">prawdopodobieństwo</a></td>
+            </tr>          
+            <tr>
+              <td><a href="strona/3427.html"><img src="../img/listPointLight.png">elementy statystyki</a></td>
+            </tr>         
+            <tr>
+              <td><a href="http://matematykadlastudenta.pl"><img src="../img/listPointLight.png">Matematyka Dla Studenta</a></td>
+            </tr>          
+            <tr>
+              <td>&nbsp;</td>
+            </tr>          
+            <tr>
+              <td><a href="strona/3548.html"><img src="../img/listPointLight.png">MATURA</a></td>
+            </tr>
+            <tr>
+              <td><a href="strona/5278.html"><img src="../img/listPointLight.png">EGZAMIN ÓSMOKLASISTY</a></td>
+            </tr>        
+            <tr>
+              <td><a href="forum/"><img src="../img/listPointLight.png">FORUM ZADANKOWE</a></td>
+            </tr>          
+            <tr>
+              <td id="dostepPremium"></td>
+            </tr>
+          </table>
+
+          <table class="theory-subjects">
+            <tr>              
+              <th>JavaScript DOM</th>
+            </tr>
+            <tr>
+              <td><a href="strona/3421.html"><img src="../img/listPointLight.png">trygonometria</a></td>
+            </tr>
+            <tr>
+              <td><a href="strona/3422.html"><img src="../img/listPointLight.png">geometria na płaszczyźnie</a></td>
+            </tr>
+            <tr>
+              <td><a href="javascript_theory_pages/events.html"><img src="../img/listPointLight.png">Events</a></td>
+            </tr>          
+            <tr>
+              <td><a href="strona/3424.html"><img src="../img/listPointLight.png">geometria w przestrzeni</a></td>
+            </tr>     
+            <tr>
+              <td><a href="strona/3425.html"><img src="../img/listPointLight.png">kombinatoryka</a></td>
+            </tr>       
+            <tr>
+              <td><a href="strona/3426.html"><img src="../img/listPointLight.png">prawdopodobieństwo</a></td>
+            </tr>          
+            <tr>
+              <td><a href="strona/3427.html"><img src="../img/listPointLight.png">elementy statystyki</a></td>
+            </tr>         
+            <tr>
+              <td><a href="http://matematykadlastudenta.pl"><img src="../img/listPointLight.png">Matematyka Dla Studenta</a></td>
+            </tr>          
+            <tr>
+              <td>&nbsp;</td>
+            </tr>          
+            <tr>
+              <td><a href="strona/3548.html"><img src="../img/listPointLight.png">MATURA</a></td>
+            </tr>
+            <tr>
+              <td><a href="strona/5278.html"><img src="../img/listPointLight.png">EGZAMIN ÓSMOKLASISTY</a></td>
+            </tr>        
+            <tr>
+              <td><a href="forum/"><img src="../img/listPointLight.png">FORUM ZADANKOWE</a></td>
+            </tr>          
+            <tr>
+              <td id="dostepPremium"></td>
+            </tr>
+          </table>
+        </div>
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="subjects">
@@ -348,10 +441,22 @@ alert(date.getFullYear());
               </div>
 
               <div class="blog reveal">
-                <h3>1 First Title</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <h3>Logging the Current ID to the Console</h3>
+                <pre>
+//HTML Markup
+&#8249;div id="A"&#8250;
+&#8199;&#8249;div id="B"&#8250;
+&#8199;&#8199;&#8249;div id="C"&#8250;Click Here&#8249;/div&#8250; 
+&#8199;&#8249;/div&#8250; 
+&#8249;/div&#8250;  
+    
+//JavaScript
+document.querySelectorAll("div").forEach(e => {
+  e.onclick = e => console.log(e.currentTarget.id);
+})
+                </pre>
                 <div class="blog-post-footer">
-                  <h5>#: switch, break, document.write()</h5>
+                  <h5>#: document., querySelectorAll(), .forEach(), .currentTarget.id</h5>
                   <div class="theory"></div>
                 </div>
               </div>
