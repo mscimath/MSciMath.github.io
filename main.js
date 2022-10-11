@@ -41,8 +41,9 @@ function isVeryBigScreen() {
 function responsiveScreen() {
   if (isSmallScreen()) {
     header.style.padding = "0px";
-    header.style.maxWidth = "100%";
-    menu.style.justifyContent = "space-evenly";
+    header.style.maxWidth = "98vw";
+    menu.style.justifyContent = "left";
+    logo.style.paddingRight = "10px"
     menuItemsList.forEach(element => element.style.fontSize = "10px");
     menuItemsList.forEach(element => element.style.padding = "4px");
     menuItemsList.forEach(element => element.style.backgroundColor = "rgb(83, 83, 0)");    
