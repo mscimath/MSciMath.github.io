@@ -153,13 +153,18 @@ section {
   position: relative;
 }
 
+/*Section Subjects on Home Page*/
+#subjects-table {
+  
+}
+
 /*Subjects Menu*/
 .section-content {
   display: flex;
   flex-direction: row;
 }
 
-table.theory-subjects{
+table.theory-subjects {
   margin: 30px auto 0 auto;
   display: block;
   box-sizing: border-box;
