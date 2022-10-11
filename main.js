@@ -35,7 +35,7 @@ function responsiveScreen() {
   if (isSmallScreen()) {
     header.style.padding = "0px";
     header.style.maxWidth = "100%";
-    menu.style.marginRight = "0";
+    menu.style.justifyContent = "space-evenly";
     menuItemsList.forEach(element => element.style.fontSize = "9px");
     menuItemsList.forEach(element => element.style.padding = "4px");    
   } else if (isMediumScreen()) {
