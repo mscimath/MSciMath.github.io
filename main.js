@@ -13,6 +13,40 @@ $(".navbar a").on("click", function (e) {
   );
 });
 
+//Responsive Queries
+let menu = document.querySelector("#top-header");
+let menuItemsList = document.querySelectorAll(".menu-item");
+
+window.addEventListener('resize', responsiveScreen);
+
+function isSmallScreen() {
+  return window.matchMedia("(max-width: 400px)").matches;
+};
+
+function isMediumScreen (){
+  return window.matchMedia("(max-width: 900px)").matches;
+}
+
+
+
+function responsiveScreen() {
+  if (isSmallScreen()) {
+    menu.style.marginRight = "0";
+    menuItemsList.forEach(element => element.style.fontSize = "8px");
+  } else if (isMediumScreen()) {
+    menu.style.flexWrap = "no-wrap";
+    menuItemsList.forEach(element => element.style.fontSize = "12px");
+  }
+    else {
+    return false;
+  }
+}
+
+responsiveScreen();
+
+
+
+
 //Search Bar
 const input = document.querySelector("#search");
 const blog = document.querySelectorAll(".blog");
