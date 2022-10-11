@@ -35,7 +35,7 @@ function responsiveScreen() {
   if (isSmallScreen()) {
     header.style.padding = "0px";
     menu.style.marginRight = "0";
-    menuItemsList.forEach(element => element.style.fontSize = "8px");
+    menuItemsList.forEach(element => element.style.fontSize = "9px");
     menuItemsList.forEach(element => element.style.padding = "4px");    
   } else if (isMediumScreen()) {
     menu.style.flexWrap = "no-wrap";
