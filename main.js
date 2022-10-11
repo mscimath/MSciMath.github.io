@@ -13,6 +13,7 @@ $(".navbar a").on("click", function (e) {
   );
 });
 
+
 //Responsive Queries
 window.addEventListener('resize', responsiveScreen);
 
@@ -20,8 +21,6 @@ let header = document.querySelector(".main-header");
 let menu = document.querySelector("#top-header");
 let menuItemsList = document.querySelectorAll(".menu-item");
 let logo = document.querySelector(".logo");
-
-
 
 function isSmallScreen() {
   return window.matchMedia("(max-width: 450px)").matches;
@@ -45,7 +44,8 @@ function responsiveScreen() {
     header.style.maxWidth = "100%";
     menu.style.justifyContent = "space-evenly";
     menuItemsList.forEach(element => element.style.fontSize = "10px");
-    menuItemsList.forEach(element => element.style.padding = "4px");    
+    menuItemsList.forEach(element => element.style.padding = "4px");
+    menuItemsList.forEach(element => element.style.backgroundColor = "rgb(83, 83, 200)");    
   } else if (isMediumScreen()) {
     header.style.padding = "0px 15px";
     menu.style.justifyContent = "space-between";

@@ -7,13 +7,13 @@
 }
 
 body {
-  max-width: 100%;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background: #333;
   color: #fff;
   line-height: 1.6;
   height: 100vh;
-  overflow-x : hidden;
+  /*overflow: hidden;*/
 }
 
 .main-container {
@@ -116,10 +116,9 @@ table.nav_list_drop a {
   transition: all 400ms;
 }
 
-/*
 .nav_list_drop td a:hover {
   color: rgb(187, 221, 210);
-}*/
+}
 
 /* Bottom line animation */
 .menu .menu-item > a::after {
@@ -336,19 +335,13 @@ input[type="text"] {
 .hidden {
   display: none;
 }
-
-/*Media Queries*/
+ 
+/*
 @media only screen and (max-width: 400px) {
-  .main-header {
-    padding: 0px;
-  }
-  
-  #top-header {
-    justify-content: space-evenly;
-  }
-  
-  .menu-item {
+  .menu .menu-item > a {
     font-size: 10px;
-    color:aqua;
+    color: rgb(83, 83, 200);
   }
-}
+
+
+}*/
