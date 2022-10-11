@@ -14,37 +14,46 @@ $(".navbar a").on("click", function (e) {
 });
 
 //Responsive Queries
+window.addEventListener('resize', responsiveScreen);
+
 let header = document.querySelector(".main-header");
 let menu = document.querySelector("#top-header");
 let menuItemsList = document.querySelectorAll(".menu-item");
 let logo = document.querySelector(".logo");
 
-window.addEventListener('resize', responsiveScreen);
+
 
 function isSmallScreen() {
-  return window.matchMedia("(max-width: 400px)").matches;
+  return window.matchMedia("(max-width: 450px)").matches;
 };
 
-function isMediumScreen (){
-  return window.matchMedia("(max-width: 900px)").matches;
-}
+function isMediumScreen(){
+  return window.matchMedia("(max-width: 750px)").matches;
+};
 
+function isBigScreen(){
+  return window.matchMedia("(max-width: 1260px)").matches;
+};
 
+function isVeryBigScreen() {
+  return window.matchMedia("(max-width: 3000px)").matches;
+};
 
 function responsiveScreen() {
   if (isSmallScreen()) {
     header.style.padding = "0px";
     header.style.maxWidth = "100%";
     menu.style.justifyContent = "space-evenly";
-    menuItemsList.forEach(element => element.style.fontSize = "9px");
+    menuItemsList.forEach(element => element.style.fontSize = "10px");
     menuItemsList.forEach(element => element.style.padding = "4px");    
   } else if (isMediumScreen()) {
-    menu.style.flexWrap = "no-wrap";
-    menuItemsList.forEach(element => element.style.fontSize = "12px");
-  }
-    else {
-    return false;
-  }
+    menu.style.justifyContent = "space-between";
+    menuItemsList.forEach(element => element.style.fontSize = "14px");
+    menuItemsList.forEach(element => element.style.padding = "0.8rem")
+  } else if (isBigScreen()) {
+    menuItemsList.forEach(element => element.style.fontSize = "16px");
+    menuItemsList.forEach(element => element.style.padding = "1rem");
+  } 
 }
 
 responsiveScreen();
