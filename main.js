@@ -22,6 +22,16 @@ let menu = document.querySelector("#top-header");
 let menuItemsList = document.querySelectorAll(".menu-item");
 let logo = document.querySelector(".logo");
 
+/*let subjectsLink = menuItemsList[1].firstElementChild;
+    subjects.addEventListener('click',() => {
+    console.log(subjectsLink);
+    subjectsLink.href = "#";
+    //document.querySelector("#subjects-drop").style.opacity = "1";
+    //document.querySelector("#subjects-drop").style.visibility = "visible";
+    } )*/ 
+
+
+
 function isSmallScreen() {
   return window.matchMedia("(max-width: 450px)").matches;
 };
@@ -39,24 +49,34 @@ function isVeryBigScreen() {
 };
 
 function responsiveScreen() {
+  let subjectsLink = menuItemsList[1].firstElementChild;
   if (isSmallScreen()) {
     header.style.padding = "0px";
     header.style.maxWidth = "98vw";
     menu.style.justifyContent = "left";
-    logo.style.paddingRight = "10px"
+    logo.style.marginRight = "50px"
     menuItemsList.forEach(element => element.style.fontSize = "10px");
     menuItemsList.forEach(element => element.style.padding = "4px");
     menuItemsList.forEach(element => element.style.backgroundColor = "rgb(83, 83, 0)");    
+
+    subjectsLink.href = "#";
+
   } else if (isMediumScreen()) {
     header.style.padding = "0px 15px";
     menu.style.justifyContent = "space-between";
     menuItemsList.forEach(element => element.style.fontSize = "14px");
-    menuItemsList.forEach(element => element.style.padding = "0.8rem")
+    menuItemsList.forEach(element => element.style.padding = "0.8rem");
+    
+    subjectsLink.href = "#subjects";
+
   } else if (isBigScreen()) {
     header.style.padding = "0px 30px";
     menu.style.justifyContent = "space-between";
     menuItemsList.forEach(element => element.style.fontSize = "16px");
     menuItemsList.forEach(element => element.style.padding = "1rem");
+
+    subjectsLink.href = "#subjects";
+
   } 
 }
 
