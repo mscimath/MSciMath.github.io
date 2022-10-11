@@ -47,10 +47,13 @@ function responsiveScreen() {
     menuItemsList.forEach(element => element.style.fontSize = "10px");
     menuItemsList.forEach(element => element.style.padding = "4px");    
   } else if (isMediumScreen()) {
+    header.style.padding = "0px 15px";
     menu.style.justifyContent = "space-between";
     menuItemsList.forEach(element => element.style.fontSize = "14px");
     menuItemsList.forEach(element => element.style.padding = "0.8rem")
   } else if (isBigScreen()) {
+    header.style.padding = "0px 30px";
+    menu.style.justifyContent = "space-between";
     menuItemsList.forEach(element => element.style.fontSize = "16px");
     menuItemsList.forEach(element => element.style.padding = "1rem");
   } 
