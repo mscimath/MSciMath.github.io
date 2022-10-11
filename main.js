@@ -57,7 +57,7 @@ function responsiveScreen() {
     logo.style.marginRight = "50px"
     menuItemsList.forEach(element => element.style.fontSize = "10px");
     menuItemsList.forEach(element => element.style.padding = "4px");
-    menuItemsList.forEach(element => element.style.backgroundColor = "rgb(83, 83, 0)");    
+    menuItemsList.forEach(element => element.style.backgroundColor = "rgb(0, 83, 0)");    
 
     subjectsLink.href = "#";
 
