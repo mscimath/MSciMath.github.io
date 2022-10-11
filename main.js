@@ -14,8 +14,10 @@ $(".navbar a").on("click", function (e) {
 });
 
 //Responsive Queries
+let header = document.querySelector(".main-header");
 let menu = document.querySelector("#top-header");
 let menuItemsList = document.querySelectorAll(".menu-item");
+let logo = document.querySelector(".logo");
 
 window.addEventListener('resize', responsiveScreen);
 
@@ -31,8 +33,10 @@ function isMediumScreen (){
 
 function responsiveScreen() {
   if (isSmallScreen()) {
+    header.style.padding = "0px";
     menu.style.marginRight = "0";
     menuItemsList.forEach(element => element.style.fontSize = "8px");
+    menuItemsList.forEach(element => element.style.padding = "4px");    
   } else if (isMediumScreen()) {
     menu.style.flexWrap = "no-wrap";
     menuItemsList.forEach(element => element.style.fontSize = "12px");
