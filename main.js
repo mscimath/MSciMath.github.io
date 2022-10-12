@@ -51,19 +51,16 @@ function isVeryBigScreen() {
 function responsiveScreen() {
   let subjectsLink = menuItemsList[1].firstElementChild;
   if (isSmallScreen()) {
-    header.style.padding = "0px";
-    header.style.maxWidth = "98vw";
-    menu.style.justifyContent = "left";
+    header.style.padding = "10px 10px";
+    header.style.maxWidth = "100vw";
+    //menu.style.justifyContent = "left";
     logo.style.marginRight = "50px"
     menuItemsList.forEach(element => element.style.fontSize = "10px");
     menuItemsList.forEach(element => element.style.padding = "4px");
-    menuItemsList.forEach(element => element.style.backgroundColor = "rgb(0, 83, 0)");    
-
     subjectsLink.href = "#";
 
   } else if (isMediumScreen()) {
     header.style.padding = "0px 15px";
-    menu.style.justifyContent = "space-between";
     menuItemsList.forEach(element => element.style.fontSize = "14px");
     menuItemsList.forEach(element => element.style.padding = "0.8rem");
     
@@ -71,7 +68,6 @@ function responsiveScreen() {
 
   } else if (isBigScreen()) {
     header.style.padding = "0px 30px";
-    menu.style.justifyContent = "space-between";
     menuItemsList.forEach(element => element.style.fontSize = "16px");
     menuItemsList.forEach(element => element.style.padding = "1rem");
 
