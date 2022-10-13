@@ -11,8 +11,6 @@ document.querySelector(".horizontal-section").style.height = horizontalLength + 
 window.onscroll = function() {
     var scrollTop = window.pageYOffset;
 
-    console.log(windowWidth);
-
     if (scrollTop >= distanceFromTop && scrollTop <= scrollDistance) {
         document.querySelector(".element-container").style.transform = 
         'translateX(-'+(scrollTop - distanceFromTop) + "px)";
