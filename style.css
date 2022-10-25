@@ -179,7 +179,6 @@ table.theory-subjects {
   text-align: left;
   border-spacing: 30px 0px;
   border-collapse: separate;
-  
 }
 /*Longer Theory*/
 .theory-content {
@@ -315,7 +314,7 @@ section .section-footer {
 
 /*Horizontal Scroll*/
 .horizontal-section {
-  padding: 100px 0;
+  padding: 100px 50px;
   display: flex;
   justify-content: start;
 }
@@ -323,7 +322,7 @@ section .section-footer {
   width: 100%;
   overflow: hidden;
   position: sticky;
-  top: 100px;
+  top: 60px;
 }
 
 .element-container {
@@ -332,8 +331,9 @@ section .section-footer {
 }
 
 .element {
-  width: 500px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
+  padding: 20px 30px;
   background-color: #aaa;
   margin-right: 20px;
   flex-shrink: 0;
@@ -393,7 +393,15 @@ input[type="text"] {
   padding: 3vw;
   margin: 5vw;
   overflow-x: visible;
+  text-align: left;
+}
 
+.blog > h3 {
+  text-align: center;
+}
+
+.blog code {
+  display: inline;
 }
 
 .blog-content {
@@ -403,17 +411,18 @@ input[type="text"] {
   overflow-x: visible;
 
 }
-
+.blog-content table {
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  border-spacing: 30px 10px;
+  border-collapse: separate;
+}
 .note-basic {
-  width: 50%;
-  overflow-x: visible;
+  
 
 }
-.note-equations {
-  width: 50%;
-  overflow-x: visible;
 
-}
 
 
 
@@ -424,6 +433,25 @@ input[type="text"] {
 }
 .hidden {
   display: none;
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 800px) {
+  .horizontal-section {
+    padding: 100px 20px;
+  }
+  .element-container .element {
+    width: 450px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .horizontal-section {
+    padding: 50px 15px;
+  }
+  .element-container .element {
+    width: 200px;
+  }
 }
  
 /*
