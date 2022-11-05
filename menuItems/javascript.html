@@ -38,8 +38,45 @@
         
       </header>
       <section class="simple" id="home">
-        <h1>Science & Maths Site</h1>
-        <p>lorem lorem</p>
+        <h1>JavaScript Theory & Practical Snippets</h1>
+        <div class="element">
+          <h3>Content</h3>             
+         <div class="overlay-container">
+           <div class="hamburger-btn">
+             <div class="btn-line"></div>
+             <div class="btn-line"></div>
+             <div class="btn-line"></div>
+           </div>
+           <div class="hamburger-menu">                  
+               <ul class="hamburger-left">
+                <li class="ham-item-left"><a href="#">1.1 Measurements in Physics and Measurement Standards</a></li>
+                <li class="ham-item-left"><a href="#">1.2. Introduction to the Analysis of Measurement Data </a></li>
+                <li class="ham-item-left"><a href="#">1.3. How to Describe the Position of a Body </a></li>
+                <li class="ham-item-left"><a href="#">1.4. Description of Rectilinear Motion </a></li>
+                <li class="ham-item-left"><a href="#">1.5. Speed in Rectilinear Motion </a></li>
+                <li class="ham-item-left"><a href="#">1.6. Uniform Rectilinear Motion </a></li>
+                <li class="ham-item-left"><a href="#">1.7. Experimental Study of Single Rectilinear Motion </a></li>
+                <li class="ham-item-left"><a href="#">1.8. Varied Rectilinear Motion </a></li>
+                <li class="ham-item-left"><a href="#">1.9. Uniformly Varied Rectilinear Motion </a></li>
+               </ul>
+             
+             
+              <ul class="hamburger-right">
+                <li class="ham-item-right"><a href="#">1.10. Position in Uniformly Varied Motion </a></li>
+                <li class="ham-item-right"><a href="#">1.11. Curvilinear Motion </a></li>
+                <li class="ham-item-right"><a href="#">1.12. Curvilinear Speed </a></li>
+                <li class="ham-item-right"><a href="#">1.13. Horizontal Projection </a></li>
+                <li class="ham-item-right"><a href="#">1.14. Speed in Different Reference Systems </a></li>
+                <li class="ham-item-right"><a href="#">1.15. Circular Motion </a></li>
+                <li class="ham-item-right"><a href="#">1.16. Centripetal Acceleration </a></li>
+                <li class="ham-item-right"><a href="#">1.17. Project. Water clock </a></li>
+                <li class="ham-item-right"><a href="#">1.18. Revision </a></li>
+              </ul>
+            </div>
+             
+           
+         </div>
+       </div>
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="theory">
@@ -1413,20 +1450,63 @@ Output: <br>
               </div>
 
               <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
+                <h3>ES6: Methods is ES6 Classes</h3>
                 <code>
                   <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
+                    Since ES6 it is not required to use the keyword function for a function assigned to a name of a 
+                    method. The prototype method is one of the types of class methods available to objects of the class.<br>
+                    The code below includes a getter - area() - and a method - calculateArea().
                   </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+                  class Triangle { <br>
+                    constructor(height, base) {<br>
+                      this.height = height; <br>
+                      this.base = base;<br>
+                    }<br>
+                    get area() {<br>
+                      return this.calculateArea();<br>
+                    }<br>
+                    calculateArea() {<br>
+                      return this.height * this.base * 0.5;<br>
+                    }<br>
+                  }<br>
+                  <br>
+                  const triangleOne = new Triangle(5, 5);<br>
+                  console.log(triangleOne.area);<br>
+                  <br>
+                  //Output: 12.5
             		</code>
                 <div class="blog-post-footer">
-                  <h5>#: .fill(), array instance</h5>
+                  <h5>#: Ecma Script 6, ES6 </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>ES6: </h3>
+                <code>
+            		</code>
+                <div class="blog-post-footer">
+                  <h5>#: Ecma Script 6, ES6 </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>ES6: </h3>
+                <code>
+            		</code>
+                <div class="blog-post-footer">
+                  <h5>#: Ecma Script 6, ES6 </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>ES6: </h3>
+                <code>
+            		</code>
+                <div class="blog-post-footer">
+                  <h5>#: Ecma Script 6, ES6 </h5>
                   <div class="theory"></div>
                 </div>
               </div>

@@ -161,3 +161,19 @@ function reveal() {
     }
   }
 }
+
+
+class Triangle {
+  constructor(height, base) {
+    this.height = height;
+    this.base = base;
+  }
+  get area() {
+    return this.calculateArea();
+  }
+  calculateArea() {
+    return this.height * this.base * 0.5;
+  }
+}
+const triangleOne = new Triangle(5, 5);
+console.log(triangleOne.area);
