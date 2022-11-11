@@ -1207,10 +1207,95 @@ Output: <br>
                 <h3>contains()</h3>
                 <code>
                   <p>
+                    → with contains() we can determine if a string contains a smaller string (a substring)<br>
                     → an ES6 feature<br>
                     → takes two arguments: the string to search for & the starting position for the search<br>
                     → returns a Boolean value <br>
                   </p>
+                  if ('abc'.contains('a')){
+                    console.log('The string "abc" contains the letter a.');
+                  } else {
+                    console.log('The string "abc" does not contain the letter a.');
+                  }
+                  if ('our string'.contains('b')){
+                    console.log('The string "our string" contains the letter b.');
+                  } else {
+                    console.log('The string "our string" does not contain the letter b.');
+                  };
+                  var thisString = "this string"
+                  if(thisString.contains('a', 1)){
+                    console.log('The string ', thisString, ' contains the letter a after the first character.');
+                  } else {
+                    console.log()
+                  }
+
+		  
+
+                </code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>contains() vs indexOf()</h3>
+                <code>
+                  We can achieve similar functionality using .contains() and indexOf(), 
+                  for example:<br>
+                  'my string'.indexOf('t', 2) !== -1 <br>
+                  will rend the same result as:<br>
+                  'my string'.contains('t', 2)
+                </code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>startsWith()</h3>
+                <code>
+                  <p>
+                    To determine if a substring starts at the beginning or at a specified index of a string 
+                    we can utilize the startsWith() ES6 feature (for supporting browsers). 
+                    The method belongs to all string objects and primitives. It accepts two arguments: 
+                    the first is a string to search for and the second is an aptional argument that determines the start
+                    position to search from which defaults to 0. 
+                  </p>
+                  if('my string'.startsWith('m')) {
+                    console.log('The given string starts with the letter "m".');
+                  } else {
+                    console.log('The given string does not start with the letter "m".');
+                  }
+                  if('my string'.startsWith('s', 3)) {
+                    console.log('"my string" contains the letter "s" at index 3.');
+                  } else {
+                    console.log('"my string" does not contain the letter "s" at index 3.');
+                  }
+                  var name = 'Jim';
+		              if(name.startsWith('John', 4)) {
+			              console.log('The string ' + name + ' starts with the word "John" from the 5th character.');
+                  }
+                </code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>startsWith() along with a for in loop</h3>
+                <code>
+                  var myname = "Banki w Lampce";<br>
+                  var alphabet = "abcdefghijklmnopqrstuvwxyz";<br>
+                  for(var i in myname){<br>
+                    for (var l in alphabet ){<br>
+                      if(myname[i].startsWith(alphabet[l])){<br>
+                        console.log(myname, "contains the letter", alphabet[l],"at", (i-(-1)), ("character.") )<br>
+                      }<br>
+                    }<br>
+                  }<br>
                 </code>
                 <div class="blog-post-footer">
                   <h5>#: </h5>
@@ -1220,7 +1305,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3></h3>
-                <code</code>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: </h5>
                   <div class="theory"></div>
@@ -1229,7 +1314,61 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3></h3>
-                <code</code>
+                <code></code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3></h3>
+                <code></code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3></h3>
+                <code></code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3></h3>
+                <code></code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3></h3>
+                <code></code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3></h3>
+                <code></code>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3></h3>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: </h5>
                   <div class="theory"></div>
