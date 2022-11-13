@@ -561,11 +561,21 @@ input[type="text"] {
   border-spacing: 30px 10px;
   border-collapse: separate;
 }
-.note-basic {
-  
-
+.content-equations {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
+.content-equation {
+  padding: 1rem;
+}
+
+.note-equations {
+  padding: 1rem;
+  border-left: 1px solid #f4f4f4;
+}
 
 
 
