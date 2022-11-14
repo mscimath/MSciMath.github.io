@@ -28,7 +28,7 @@ body {
 
 .main-header {
   overflow-x: visible;
-  z-index: 1;
+  z-index: 10;
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(250, 250, 250, 0));
   position: fixed;
   top: 0;
@@ -41,6 +41,7 @@ body {
   justify-content: space-between;
   align-items: center;
   overflow-x: visible;
+  z-index: 10;
 }
 
 .menu {
@@ -491,28 +492,42 @@ section .section-footer {
 
 /*Search Bar*/
 .search-main-container {
-  width: 90%;
+  width: 100%;
   /* max-width: 700px;*/
-  margin: 30px auto;
+  margin: 10px auto;
   overflow-x: visible;
 
 }
 .search-container {
-  padding: 5vw;
-  margin: 5vw;
+  padding: 2vw;
+  margin: 0 2vw;
   overflow-x: visible;
+  position: relative;
+}
 
+.search-header {
+  position: sticky;
+  top: 2.2rem;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
 }
 .search-container #search-title {
-  padding: 2vw;
+  width: 35%;
+  margin: 2vw;
+  padding: 0 2vw;
+  display: flex;
   background: rgba(255, 255, 0, 0.2);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
   color: rgba(242, 241, 241, 0.9);
   border-radius: 2px;
   letter-spacing: 3px;
+  align-items: center;
 }
+
 #search {
-  margin: 2vw 0;
+  width: 65%;
+  margin: 2vw 2vw 2vw 0;
   background: rgba(245, 245, 245, 0.6);
   backdrop-filter: blur(5px);
   color: #336;
@@ -520,7 +535,6 @@ section .section-footer {
 
 }
 input[type="text"] {
-  width: 100%;
   padding: 0.7em 1.2em;
   border: 1px solid #aaa;
   outline-color: #ddd;
@@ -552,7 +566,6 @@ input[type="text"] {
   flex-direction: row;
   flex-wrap: wrap;
   overflow-x: visible;
-
 }
 .blog-content table {
   display: block;
@@ -562,10 +575,11 @@ input[type="text"] {
   border-collapse: separate;
 }
 .content-equations {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .content-equation {
