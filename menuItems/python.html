@@ -154,8 +154,51 @@
             </div>
             <div class="blogs">
               <div class="blog reveal active">
-                <h3>Assigning values of one object onto another.</h3>
+                <h3>The print() statement.</h3>
                 <pre>
+Try out the print() statement by typing it into a file with .py extension (e.g. print_ex.py):
+print("Hello World!")		
+
+Next run the file from the command prompt by typing (in Windows):
+
+python print_ex.py
+ or (in OSX or Linux)
+python3.6 print_ex.py 
+ The 3.6 being the version of python installed on my system. Feel free to replace it with your version
+ of python. 
+ 
+ The above is typed into the terminal from the level of the file. If you are currently in a different 
+ directory just type the path to the file instead of print_ex.py.
+
+It should output Hello World! into the console.
+
+When printing a string instance (actual text), and not a variable (more below),
+we place the string of characters in between quotation marks.
+
+print("Fast typing is fun.. ha ha.")
+
+or 
+
+print('Hello You all.')
+
+The most common approach is to use single quotes. My personal preference though is to use
+double quotes to surround the string, so I can use single quotes within it without the
+need to escape them.
+
+print("I'd be happy if my dog wouldn't dream of a bowl full of my cat's food.")
+
+or
+
+print('She said "I live in Toronto."')
+
+This will cut the sentence before the letter 'I' and throw an error:
+
+print("She said "I don't live in Toronto"")
+
+We can escape any 'sensitive' character in a string with the backslash character:
+
+print("They told us \"We don't need no education\".")
+
             </pre>
                 <div class="blog-post-footer">
                   <h5>#: object, Object.assign()</h5>
