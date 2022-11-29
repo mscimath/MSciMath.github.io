@@ -270,6 +270,9 @@ for (let [key, value] of zoo) {
 output: 
 Map(3) {"Zebra" => 5, "Gorilla" => 2, "Monkey" => 76}
 5
+Zebra:5
+Gorilla:2
+Monkey:76
                 </pre>
                 <div class="blog-post-footer">
                   <h5>#: Map(), javascript key:value pairs, .get()</h5>
@@ -1652,19 +1655,110 @@ Output: <br>
                 </div>
               </div>
 
+              
               <div class="blog reveal">
+                <h3>Node.js - overview</h3>
+                <pre>
+Tech:
+  ■ It is not a JS framework, but a JS Runtime 
+  ■ Just as a Google Chrome, Node.js was built on the V8 JS engine
+  ■ Written in C++
+  ■ Allows us to run JS code on the server
+
+Pros:
+  ► Works on a single thread using non-blocking I/O calls
+  ► Asynchronous
+  ► Supports thousands concurrent connections
+  ► Optimizes throughout & scalability in apps with many I/O operations
+  ► Fast & efficient apps
+
+NPM - Node Package Manager:
+  ▬ Installs third party packages
+  ▬ Packages are stored in the "node_modules" folder
+  ▬ Dependencies get listed in a "package.json" file
+  ▬ NPM scripts can be written to run specific tasks such as run a server
+  ▬ some commands:
+	npm init 	- generates a package.json file
+	npm install packageName  - installs a package locally
+	npm install -g packageName  - installs a package globally
+
+Node Modules:
+  ° Node Core Modules: path, fs, http, etc
+	const path = require('path');
+  ° Third party modules
+  ° Custom modules (files with export)
+	const myFile = require('./myFile');
+
+All the modules in Node.js are wrapped in 
+what is called a Module Wrapper Function:
+(function (exports, require, module, __filename, __dirname){
+
+}),
+which gives acces to all the five included features, so
+for example:
+console.log(__dirname, __filename);
+will print in the console paths to the directory of the file and the path to
+the file respectively
+
+            		</pre>
+                <div class="blog-post-footer">
+                  <h5>#: javascript runtime, node.js, javascript server</h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+<div class="blog reveal">
                 <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
+                <pre>
+const path = require('path');
+
+//Base file name - prints the name of the file from which we are working
+console.log(path.basename(__filename));
+
+//Directory name - prints the directory in which our working file is located
+console.log(path.dirname(__filename));
+
+//File extension - prints the extension of the file from which we are working
+console.log(path.extname(__filename));
+
+//Create path object - prints an object structure of the file
+console.log(path.parse(__filename));
+
+//Concatenate paths - prints a path_to_directory/test/hello.html 
+//(it does not create the hello.html file)
+console.log(path.join(__dirname, 'test', 'hello.html'))	
+            		</pre>
+                <div class="blog-post-footer">
+                  <h5>#: node.js, js runtime, paths, path node module</h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+	      <div class="blog reveal">
+                <h3>Node.js - Creating a Folder</h3>
+                <pre>
+//Create 'test' Folder inside Current Direcotry
+fs.mkdir(path.join(__dirname, '/test'), {}, err => {
+    if(err) throw err;
+    console.log('Folder created...');
+});             
+		</pre>
+                <div class="blog-post-footer">
+                  <h5>#: node.js, js runtime, working with files in js, create folder, mkdir</h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>Node.js - Creating and Writing to a File</h3>
+                <pre>
+//Create and Write to File - writeFile() overwrites whatever is in the file
+fs.writeFile(path.join(__dirname, '/test', 'hello.txt'), 
+'Hello all Worlds.', err => {
+    if (err) throw err;
+    console.log('File written to...');
+});
+		</pre>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
                   <div class="theory"></div>
@@ -1672,18 +1766,15 @@ Output: <br>
               </div>
 
               <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
+                <h3>Node.js - Appending to an Existing File</h3>
+                <pre>
+//Append to a File
+fs.appendFile(path.join(__dirname, '/test', 'hello.txt'),
+' I love all the languages.', err => {
+    if (err) throw err;
+    console.log('File appended to...');
+});
+		</pre>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
                   <div class="theory"></div>
@@ -1691,18 +1782,23 @@ Output: <br>
               </div>
 
               <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
+                <h3>Node.js - Creating, Writing to and Appending to a File</h3>
+                <pre>
+//If we want to run two functions, one after another, since they are asynchronous,
+//we can treat the second one as a callback of the first one, as so:
+fs.writeFile(path.join(__dirname, '/test', 'hello.txt'), 
+'Hello all Worlds.', err => {
+    if (err) throw err;
+    console.log('File written to...');
+
+    //File append as a callback function
+    fs.appendFile(path.join(__dirname, '/test', 'hello.txt'),
+    ' I love all the languages.', err => {
+        if (err) throw err;
+        console.log('File appended to...');
+    });
+});
+		</pre>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
                   <div class="theory"></div>
@@ -1710,18 +1806,15 @@ Output: <br>
               </div>
 
               <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
+                <h3>Node.js - Reading from a File</h3>
+                <pre>
+//Read file (if we do not insert utf8 as the second parameter of readFile we get just raw buffer)
+fs.readFile(path.join(__dirname, '/test', 'hello.txt'), 
+'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+		</pre>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
                   <div class="theory"></div>
@@ -1729,18 +1822,16 @@ Output: <br>
               </div>
 
               <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
+                <h3>Node.js - Renaming a File</h3>
+                <pre>
+//Rename file 
+fs.rename(path.join(__dirname, '/test', 'hello.txt'), 
+path.join(__dirname, '/test', 'helloworlds.txt'), 
+err => {
+    if(err) throw err;
+    console.log('File renamed...');
+});*/
+		</pre>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
                   <div class="theory"></div>
@@ -1748,80 +1839,39 @@ Output: <br>
               </div>
 
               <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
+                <h3>Node.js - mostly used functions of the os module</h3>
                 <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
+//The os module of node.js checks the data 
+and analitics of the operating system         
+const os = require('os');
+
+//Check Platform
+console.log(os.platform());
+
+//Check CPU Arch
+console.log(os.arch());
+
+//Check CPU Core Info
+console.log(os.cpus());
+
+//Check Free Memory 
+console.log(os.freemem());
+
+//Total Memory
+console.log(os.totalmem());
+
+//Home Directory
+console.log(os.homedir());
+
+//Uptime
+console.log(os.uptime());
+		</code>
                 <div class="blog-post-footer">
-                  <h5>#: .fill(), array instance</h5>
+                  <h5>#: node.js, os module, os analitics, os information, operating system with JavaScript</h5>
                   <div class="theory"></div>
                 </div>
               </div>
 
-              <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
-                <div class="blog-post-footer">
-                  <h5>#: .fill(), array instance</h5>
-                  <div class="theory"></div>
-                </div>
-              </div>
-
-              <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
-                <div class="blog-post-footer">
-                  <h5>#: .fill(), array instance</h5>
-                  <div class="theory"></div>
-                </div>
-              </div>
-
-              <div class="blog reveal">
-                <h3>Filling an Array with the Same Value</h3>
-                <code>
-                  <p>
-                    Adding a comma after the start parameter of the .fill() method
-                    will apply the given value at all the indexies from the start to the end
-                    of the array.
-                  </p>
-            			var sameArr = new Array(7);<br>
-            			sameArr.fill('value', 0,)<br>
-                  console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
-            		</code>
-                <div class="blog-post-footer">
-                  <h5>#: .fill(), array instance</h5>
-                  <div class="theory"></div>
-                </div>
-              </div>
 
             </div>
           </div>

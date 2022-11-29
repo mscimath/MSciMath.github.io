@@ -574,6 +574,8 @@ input[type="text"] {
   border-spacing: 30px 10px;
   border-collapse: separate;
 }
+
+
 .content-equations {
   width: 100%;
   display: flex;

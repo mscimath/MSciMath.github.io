@@ -249,7 +249,7 @@
                 </div>
               </div>
 
-              <div class="blog reveal active" id="rigid-body">
+              <div class="blog reveal active rigid-body" >
                 <h3>Rigid Body</h3>
                 <div class="blog-content">
                   <h3>Translational & Rotational Motion</h3>
@@ -374,80 +374,179 @@
                 </div>
               </div>
 
-              <div class="blog reveal">
-                <h3>Using for loop on an array.</h3>
-                <pre>
-var arr = [];
-for (i = 2; i > 0; i--){
-  arr[i] = i;
-  console.log(arr)
-}
-console.log(arr.length*i);
+              <div class="blog reveal active thermodynamics">
+                <h3>Thermodynamics</h3>
+                <div class="blog-content">
+                  <h3>The Zeroth Law of Thermodynamics. Temperature.</h3>
+                  <div class="note-basic">
+                    <table>
+                      <tr>
+                        <th colspan="2">Revision of Previous Matter</th>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <p>Thermodynamics uses the concepts of heat and temperature.
+                          Already at the beginnning of the 19th century, it was known that
+                          these concepts are related to the structure of matter.</p>
+                          <p>
+                          In the past, heat was thought to be a kind of substance that is
+                          stored in an object and can move between objects.<br>
+                          In 1840, Joule, Rumford and others discovered that heat is a form of
+                          energy.
+                        </p>
+                        <p>
+                          Brown (1827): observation of chaotic movements of plant pollen in water. <br>
+                          Einstein (1905): Brownian motions are caused by collisions of pollen
+                          with water molecules - direct proof for the atomic structure of matter.
+                        </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Two systems are in thermal contact if they can exchange energy
+                          without doing macroscopic work. This form of energy is called heat.
+                        </td>
+                        <td><h4>Heat and Thermal Contact</h4></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          If systems in thermal contact do not exchange energy, then they are in
+                          thermal equilibrium.<br>
+                          We say that if two systems are in thermal equilibrium then they have the same 
+                          temperature.
+                        </td>
+                        <td>
+                          <h4>Thermal Balance</h4>
+                          <br>
+                          <figure></figure>
+                            <img width="85%" src="../img/physics/thermal_balance.PNG"/>
+                            <figcaption>Two Systems in Thermal Contact</figcaption>
+                          </figure>
+                          \[T_A = T_B\]
+                        </td>
+                      </tr>
+                      <tr>
+                        <th colspan="2">
+                          The Zeroth Law of Thermodynamics
+                        </th>                   
+                      </tr>
+                      <tr>
+                        <td colspan="2">If the two systems \(A\) and \(B\) are in thermal
+                           equilibrium with \(C\), 
+                          then \(A\) is also in thermal equilibrium with \(B\).</td>
+                      </tr>
+                      <tr>
+                        <td >
+                          <figure>
+                            <img src="../img/physics/zeroth_law_thermo.PNG"/>
+                            <figcaption>We have three pieces of matter. Each has
+                              conductive edges.
+                            </figcaption>
+                          </figure>
+                          <figure>
+                            <img src="../img/physics/zeroth_law_thermo2.PNG"/>
+                            <figcaption>
+                              If there is no heat flow between A and B and B and C, there will be no heat flow between A and C either.
+                            </figcaption>
+                          </figure>
+                        </td>
+                        <td>
+                          <figure>
+                            <img src="../img/physics/zeroth_law_thermo3.PNG"/>
+                            <figcaption>
+                              \[T_A = T_C\]
+                            </figcaption>
+                          </figure>
+                        </td>
+                      </tr>
 
-output: 
-[empty x 2, 2]
-[empty, 1, 2]
-0
-                </pre>
+                    </table>
+                  </div>
+                  <div class="content-theory">
+                    <p>
+                    <div class="content-rule">Tutaj jakaś zasada w  środku paragrafu </div> 
+                    
+
+                    </p>
+                  </div>
+                </div>
                 <div class="blog-post-footer">
-                  <h5>#: switch, break, document.write()</h5>
-                  <div class="theory"></div>
+                  <h5>#: </h5>
+                  <div class="theory">Video</div>
                 </div>
               </div>
 
-              <div class="blog reveal">
-                <h3>Simple for loop - incrementing a value.</h3>
-                <pre>
-for(const a = 0; a < 10; a++ ){
-  console.log(a)
-}
-            </pre
-                >
+              <div class="blog reveal active thermodynamics" >
+                <h3>Thermodynamics</h3>
+                <div class="blog-content">
+                  <h3>Heat Capacity. Calorimetry.</h3>
+                  <div class="note-basic">
+                    <table>
+                      <tr>
+                        <th colspan="2">Revision of Previous Matter</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          Heat is the amount of energy transferred from the environment 
+                          to a thermodynamic system due to the difference in temperature 
+                          between the system and its environment.
+                        </td>
+                        <td>Heat</td>
+                      </tr>
+                      <tr>
+                        <td>1 kcal (calorie) - the amount of heat needed to raise the 
+                          temperature of 1g of water from 14.5°C to 15.5°C.<br>
+                          A food calorie corresponds to 1kcal.</td>
+                          <td>1kcal <br>
+                          SI unit of heat - J (Joule)<br>
+                          \(1cal = 4.186 J\) (mechanical equivalent of heat)
+                          </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          
+                          The amount of heat absorbed by the system \(\Delta Q\) necessary to change the temperature 
+                          of the system is proportional to this change in temperature \(\Delta T\).
+                        </td>
+                        <td>
+                          Heat Capacity
+                          \[\Delta Q = C \Delta T\]
+                          \[\Delta Q =  \int_{T_p}^{T_k} C (T)dT \]
+                        </td>                        
+                      </tr>
+                      <tr>
+                        <td>
+                          Heat capacity of a system is proportional to the amount and type 
+                          of matter in the system.<br>
+                          If the amount of matter is expressed by mass (m), than heat capacity (\(C\)):
+                          \[ C = c \cdot m, \]
+                          where \(c\) is specific heat and we can say that the amout of heat
+                          released or supplied:
+                          \[ \Delta Q = c \cdot m \cdot \Delta T \]
+                          Whereas when the amount of matter is expressed by number of moles (n):
+                          \[ C = C_m \cdot n, \]
+                          where \(C_m\) is molar specific heat.
+                        </td>
+                        <td>
+                          Specific Heat & Molar Heat
+                        </td>
+                      </tr>
+
+                    </table>
+                  </div>
+                  <div class="content-theory">
+                    <p>
+                    <div class="content-rule"></div> 
+                    
+
+                    </p>
+                  </div>
+                </div>
                 <div class="blog-post-footer">
-                  <h5>#: switch, break, document.write()</h5>
-                  <div class="theory"></div>
+                  <h5>#: </h5>
+                  <div class="theory">Video</div>
                 </div>
               </div>
 
-              <div class="blog reveal">
-                <h3>Looping over a Map() object.</h3>
-                <pre>
-let map = new Map();
-map.set('k1', '1').set('k2', '2');
-console.log(map);
-map.get('k1');
-for (let kv of map.entries())
-    console.log(kv[1]);
-
-output:
-Map(2) {'k1' => '1', 'k2' => '2'}
-1
-2
-                </pre>
-                <div class="blog-post-footer">
-                  <h5>#: Map(), object, .entries()</h5>
-                  <div class="theory"></div>
-                </div>
-              </div>
-
-              <div class="blog reveal">
-                <h3>Simple for loop.</h3>
-                <pre>
-Is the below snippet valid?
-
-for (const a = 0; a < 10; a++){
-  console.log(a);
-}
-
-answer: no
-
-hint: Assignment to a constant variable.
-                </pre>
-                <div class="blog-post-footer">
-                  <h5>#: const, for loop, incrementing, console.log()</h5>
-                  <div class="theory"></div>
-                </div>
-              </div>
 
               <div class="blog reveal">
                 <h3>if statement</h3>
