@@ -242,8 +242,7 @@ switch(day){
 }
 
 output: Sunday
-            </pre
-                >
+            </pre>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -276,7 +275,12 @@ Monkey:76
                 </pre>
                 <div class="blog-post-footer">
                   <h5>#: Map(), javascript key:value pairs, .get()</h5>
-                  <div class="theory"></div>
+                  <div class="theory">
+			  <p>
+			  	The Map() object keeps key-value pairs in the order of insertion. Both the 
+				  key and the value can be of any data kind.
+			  </p>	
+		  </div>
                 </div>
               </div>
 
@@ -704,29 +708,109 @@ Output: <br>
               </div>
 
               <div class="blog reveal">
-                <h3>Determine an Object to be Plain</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <h3>Determine whether an Object is Plain (created by Using new Object() or Object literal.</h3>
+                <pre>
+var date = new Date();
+var error = new Error();
+var object = new Object();
+var objectLiteral = {};
+
+if (date.constructor === Object) {
+	console.log("date is a plain object.");
+} else {
+	console.log("date is a descendant of some other object.");
+}
+	
+if (error.constructor === Object) {
+	console.log("error is a plain object.");
+} else {
+	console.log("error is a descendant of some other object.");
+}
+
+if (object.constructor === Object) {
+	console.log("object is a plain object.");
+} else {
+	console.log("object is a descendant of some other object.");
+}
+
+if (objectLiteral.constructor === Object) {
+	console.log("objectLiteral is a plain object.")
+} else {
+	console.log("objectLiteral is a descendant of some other object.");
+}
+
+
+		</pre>
                 <div class="blog-post-footer">
-                  <h5>#: switch, break, document.write()</h5>
-                  <div class="theory"></div>
+                  <h5>#: object literal, Object.prototype.constructor, if & else statement</h5>
+                  <div class="theory">
+			  <p>
+			  The .constructor property of Object.prototype retrieves, as
+				  the name prompts, the constructor creating the instance.
+			  </p>	
+		  </div>
                 </div>
               </div>
 
               <div class="blog reveal">
-                <h3>Arrays - Assigning & Retrieving Values</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <h3>Arrays - Creation & Assignment & Retrievement of its Values</h3>
+                <pre>
+var class = ["Patricia", "Caroline", "Bob", "Jeniffer", "Carol", "Amanda"];
+console.log(class[0]);
+console.log(class[1]);
+console.log(class[2]);
+console.log(class[3]);
+console.log(class[4]);
+console.log(class[5]);
+console.log(class.length);
+
+var score = [ 1.0, 2.0, 3.0, 4.0, 5.0 ];
+console.log(score[score.length - 1]*2);
+console.log(score[2]) //logs 3 instead of 3.0
+
+var empty = new Array(score.length - 1);
+console.log(empty[3]);	//logs undefined (the value at index 3 has not been defined)
+empty[3] = "string value";
+console.log(empty[3])   //logs "string value"
+console.log(empty.length);
+
+for (let v of score) {
+	console.log(v)
+}
+
+		</pre>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
-                  <div class="theory"></div>
+                  <div class="theory">
+			  <p> 
+				  Arrays are used for storing lists of values in an ordered manner.</br>
+				  Their values are numbered with unique identifiers, which enables a high key predictability.</br>
+		      The lowest key value is always 0 and the highes Array.prototype.length - 1.</br>
+		      Can hold any data types.</br>
+		      Allows for duplicate values.
+			  </p>	
+		  </div>
                 </div>
               </div>
 
               <div class="blog reveal">
                 <h3>Regular Expression Literal</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <pre>
+var text = "Lorem, ipsum dolor.";
+
+if (/dolor/.test(text)) {
+   console.log("The word dolor is included in text.");
+} else {
+	console.log("The word dolor is not included in text.");
+}
+		</pre>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
-                  <div class="theory"></div>
+                  <div class="theory">
+			  <p>
+Regular Expressions are commonly used in many programming languages for matching a text against a precise pattern. They are not unique for JavaScript.
+			  </p>
+			</div>
                 </div>
               </div>
 
