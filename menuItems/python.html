@@ -38,13 +38,13 @@
         
       </header>
       <section class="simple" id="home">
-        <h1>Science & Maths Site</h1>
-        <p>lorem lorem</p>
+        <h1>M<span>adej</span> S<span>ci</span>M<span>ath</span></h1>
+        <p></p>
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="theory">
         <div class="section-title">
-          <h1>JavaScript in Theory</h1>
+          <h1>Python in Theory with Snippets</h1>
           <p>Examples with Full Solutions</p>
         </div>
         <div class="section-content">
@@ -155,7 +155,7 @@
             <div class="blogs">
               <div class="blog reveal active">
                 <h3>The print() statement.</h3>
-                <pre>
+                <code>
 Try out the print() statement by typing it into a file with .py extension (e.g. print_ex.py):
 print("Hello World!")		
 
@@ -199,50 +199,180 @@ We can escape any 'sensitive' character in a string with the backslash character
 
 print("They told us \"We don't need no education\".")
 
-            </pre>
+            </code>
+            
                 <div class="blog-post-footer">
                   <h5>#: object, Object.assign()</h5>
                   <div class="theory"></div>
                 </div>
               </div>
               <div class="blog reveal active">
-                <h3>The switch statement.</h3>
+                <h3>Commenting in Python</h3>
                 <pre>
-            </pre
+# Comments allow as to read our programs easier when opened much later or by another person.
+# They are written with the hash (#) sign at the beginning, which tells Python to ignore anything 
+# in the line after it. Unless is within a string:
+
+p = print
+p("This # sign will be printed as part of the string of characters and so does not need to be escaped.")      #In Python3 we can bind new references to functions but not to keywords.
+
+#In Python3 print is a function and not a statement so it needs those parentheses
+                </pre
                 >
                 <div class="blog-post-footer">
-                  <h5>#: switch, break, document.write()</h5>
+                  <h5>#: </h5>
                   <div class="theory"></div>
                 </div>
               </div>
               <div class="blog reveal">
-                <h3>Looping over a Map() object.</h3>
+                <h3>Working with Maths</h3>
                 <pre>
+# The math signs in Python are called as follows:
+
+# +   plus :)               addition
+# -   minus                 subtraction
+# /   slash                 division 
+# //  double slash          floor division # dropps what comes after the decimal
+# *   asterisk              multiplication
+# **  double asterisk       power
+# %   percent               modulus # remainder of division
+# <   less-than             comparison
+# >   greater-than          comparison
+# <=  less-than-equal       comparison
+# >=  greater-than-equal    comparison
+
+print("I am the proud owner of: ")
+print("Dogs:" 5/5)
+print("Rabbits:", 0+1)
+print("I have also managed to own", (8 - 7)*4, "cars.")
+print("Is it true that 3 + 2 < -9 + 8?")
+print(3+2 < -9+8)
+print("What does 3 + 2 equal to?", 3+2)
+print("What does -9 + 8 equal to?", -9 + 8)
+print("All right, I gues I have missed the minus at the beginning.")
+print(7.0 / 4.0)
+print(7.0//4.7)
+print(9//8)
                 </pre>
                 <div class="blog-post-footer">
-                  <h5>#: Map(), javascript key:value pairs, .get()</h5>
+                  <h5>#: </h5>
                   <div class="theory"></div>
                 </div>
               </div>
 
               <div class="blog reveal">
-                <h3>Using for Loop on an Array.</h3>
+                <h3>Variables</h3>
                 <pre>
+rooms = 100
+facility_rooms = 6
+single_rooms = 20
+double_rooms = 20
+triple_rooms = (rooms - single_rooms - double_rooms - facility_rooms)/2 
+quadruple_rooms = int(triple_rooms)
+empty_rooms = rooms - facility_rooms - single_rooms - double_rooms - triple_rooms - quadruple_rooms
+staff = 10
+beds = single_rooms + 2*double_rooms + 3*triple_rooms + 4*quadruple_rooms
+guests = 66
+empty_beds = beds - staff - guests - 2
+
+print("There are", rooms, "spaces in our hotel.")
+print("The hotel can fit", beds - staff, "people." )
+print("There will be", empty_beds, "vacant beds today.")
+print("Our", staff, "people of staff accomodates", guests, "guests today. So on the premises together we are", staff + guests, "people.")
+
+                </pre>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+              <div class="blog reveal">
+                <h3>Python3 format characters</h3>
+                <p>The Unicode Standard is applied in Python 3 for representing any characters we type in the code.
+                  The reference of which is found <a href="https://home.unicode.org/">here</a>. <!--open links in another tab and change css-->
+                </p> <!--change the font of p-->
+                <p>The below example demonstrates the usage of the old way of string formatting. For the other ways see <a href="#">New Way</a>.</p>
+                <pre>
+#!/usr/bin/env python                  
+# -*- encoding: UTF-8 -*-
+name = "Madej"
+age = 36
+height_cm = 170
+height_inch = height_cm*0.39
+weight_kg = 70
+weight_lbs = weight_kg*2.2046
+eyes = 2
+fingers = "all intact"
+hair = "curly"
+
+print("If anyone is asking, my family's name is %s." %name)
+print("The height of my body is %dcm which makes %d in inches." %(height_cm, height_inch)) 
+print("Our Earth attracts me with the force of %xN, because I weigh %dkg or %dlbs if anyone prefers." %(weight_kg*9.81, weight_kg, weight_lbs))
+print("I have %d eyes - as most of bigger species, and fingers %s. My head decoration is usually %s." %(eyes, fingers, hair))
+                </pre>
+                <table> <!--change font and to equal and centered display-->
+                  <caption>Format Types & Their Character Representation</caption>
+                  <tr><th>Character</th><th>Type</th></tr>
+                  <tr><td>%b</td><td>&#x2012; binary</td></tr>
+                  <tr><td>%c</td><td>&#x2012; integer to character (unicode) conversion</td></tr>
+                  <tr><td>%d</td><td>&#x2012; decimal - number in base 10</td></tr>
+                  <tr><td>%o</td><td>&#x2012; octal - number in base 8</td></tr>
+                  <tr><td>%x</td><td>&#x2012; hex - number in base 16</td></tr>
+                  <tr><td>%n</td><td>&#x2012; number - same as %d, but using the current locale setting for number separation.</td></tr>
+                  <tr><td>%e</td><td>&#x2012; scientific notation with default precision of 6 digits after decimal point.</td></tr>
+                  <tr><td>%E</td><td>&#x003D; %e</td></tr>
+                  <tr><td>%f</td><td>&#x003D; fixed point notation with a given precision 'p'</td></tr>
+                  <tr><td>%g</td><td>&#x2012; general format - with a given precision 'p'</td></tr>
+                  <tr><td>%n</td><td>&#x2012; number</td></tr>
+                </table>
+                <div class="blog-post-footer">
+                  <h5>#: </h5>
+                  <div class="theory"></div>
+                </div>
+              </div>
+
+
+              <div class="blog reveal">
+                <h3>Creating a .txt file and writing to it in Python</h3>
+                <pre>
+#Task: Create a file named 'my_first_file' with the .txt extension 
+#in which you will write your full name. 
+#Then add to the file a new line with your date of birth. 
+#Add to the file each data from the following list: [3, 68, 6.148, 4, 8.478, 78, 150].
+#Each data element in a separate line in the following way: "line 'line number': 'data element', e.g. 'line 10: 5' . After the last element there is not
+#to be an empty line. Make use of the for loop. 
+
+#The Code:
+list1 = [3, 68, 6.148, 4, 8.478, 78, 150]
+file_path = 'C:/Users/madej/OneDrive/Dokumenty/python_scripts/working_with_data_and_math/my_first_file.txt'
+with open(file_path, 'w+') as f:
+    f.write('Madej SciMath')
+with open(file_path, 'a') as f:
+    f.write('\n15.02.1986')
+with open(file_path, 'a') as f:
+    for i in range(1, len(list1)):
+        f.write("\nline " + str(i) + ": " + str(list1[i]))
+    
+"""
+The above could have been written shorter, but it was divided above into separate
+tasks. The shorter version could be as follows:
+"""
+list1 = [3, 68, 6.148, 4, 8.478, 78, 150]
+file_path = 'C:/Users/madej/OneDrive/Dokumenty/python_scripts/working_with_data_and_math/my_first_file.txt'
+with open(file_path, 'w+') as f:
+    f.write('Madej SciMath')
                 </pre>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
                 </div>
               </div>
-
+<!--
               <div class="blog reveal">
                 <h3>Simple for Loop - Incrementing a Value.</h3>
-                <pre>
-for(const a = 0; a < 10; a++ ){
-  console.log(a)
-}
-            </pre
-                >
+                <code></code>
+
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -251,19 +381,7 @@ for(const a = 0; a < 10; a++ ){
 
               <div class="blog reveal">
                 <h3>Looping over a Map() object.</h3>
-                <pre>
-let map = new Map();
-map.set('k1', '1').set('k2', '2');
-console.log(map);
-map.get('k1');
-for (let kv of map.entries())
-    console.log(kv[1]);
-
-output:
-Map(2) {'k1' => '1', 'k2' => '2'}
-1
-2
-                </pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: Map(), object, .entries()</h5>
                   <div class="theory"></div>
@@ -272,17 +390,7 @@ Map(2) {'k1' => '1', 'k2' => '2'}
 
               <div class="blog reveal">
                 <h3>Simple for loop.</h3>
-                <pre>
-Is the below snippet valid?
-
-for (const a = 0; a < 10; a++){
-  console.log(a);
-}
-
-answer: no
-
-hint: Assignment to a constant variable.
-                </pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: const, for loop, incrementing, console.log()</h5>
                   <div class="theory"></div>
@@ -291,15 +399,7 @@ hint: Assignment to a constant variable.
 
               <div class="blog reveal">
                 <h3>if statement</h3>
-                <pre>
-Can the if statement be used 
-without the else part?
-
-answer: yes, if the 'if' part 
-is not true, the code just 
-jumps over it and proceeds 
-with the next thing on the stack.
-                </pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: if statement, else</h5>
                   <div class="theory"></div>
@@ -308,10 +408,7 @@ with the next thing on the stack.
 
               <div class="blog reveal">
                 <h3>Alerting the current year.</h3>
-                <pre>
-var date = new Date();
-alert(date.getFullYear());
-                </pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: date, year, alert(), Date(), .getFullYear()</h5>
                   <div class="theory"></div>
@@ -320,66 +417,7 @@ alert(date.getFullYear());
 
               <div class="blog reveal">
                 <h3>Thread of Execution and the Call Stack</h3>
-                <pre>
-Javascript is not a asynchronous language, 
-it is a synchronous language with asynchronous 
-capabilities.
-JavaScript is a single-threaded language.
-Thread is a single sequential flow of 
-control - a process of a program:
-  Thread of execution:
-  op1 -> op2 -> op3 -> op4 -> Call Stack
-                           -> Memory Heap
-
-The Call Stack keeps track of functions (a stack 
-of functions) to be executed & manages execution 
-contexts. The Stacks are LIFO (last in first out).
-
-  Call Stack :  third()
-                second()
-                first()
-                Global EC (execution context)
-
-A Stack is a data structure.
-
-Example of a simple call stack:
-                  function first() {
-                    console.log('first...');
-                  };
-                  function second() {
-                    console.log('second...');
-                  };
-                  function third() {
-                    console.log('third...');
-                  };
-                  first();
-                  second();
-                  third();
-
-                  output: first...
-                          second...
-                          third... 
-
-Example of a just a little more complex call stack:
-                  function first() {
-                    console.log('first...');
-                    second();
-                  };
-                  function second() {
-                    console.log('second...');
-                    third();
-                  };
-                  function third() {
-                    console.log('third');
-                  };
-                  first();
-
-                  output: first... 
-                          second... 
-                          third... 
-
-
-                </pre>
+                <code></code>
 
                 <div class="blog-post-footer">
                   <h5>
@@ -392,19 +430,7 @@ Example of a just a little more complex call stack:
 
               <div class="blog reveal">
                 <h3>Logging the Current ID to the Console</h3>
-                <pre>
-//HTML Markup
-&#8249;div id="A"&#8250;
-&#8199;&#8249;div id="B"&#8250;
-&#8199;&#8199;&#8249;div id="C"&#8250;Click Here&#8249;/div&#8250; 
-&#8199;&#8249;/div&#8250; 
-&#8249;/div&#8250;  
-    
-//JavaScript
-document.querySelectorAll("div").forEach(e => {
-  e.onclick = e => console.log(e.currentTarget.id);
-})
-                </pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: document., querySelectorAll(), .forEach(), .currentTarget.id</h5>
                   <div class="theory"></div>
@@ -414,27 +440,7 @@ document.querySelectorAll("div").forEach(e => {
               <div class="blog reveal">
                 <h3>Local Storage</h3>
                 <code>
-- What is kept in Local Storage is accesibble through all directories (i.g. tabs in a browser), 
-meaning if a variable is set for local storage in one tab, it can be displayed or accessed 
-in another tab of the browser.
-- The data does not expire, unless we clear it programatically.
-<p>//CSS Style<br>
-&#8249;style media="screen"&#8250;
 
-&#8249;/style&#8250;<br>
-
-//HTML Markup<br>
-&#8249;h2 id="title"&#8250; Local Storage - JavaScript &#8249;/h2&#8250;<br>
-
-//JavaScript Script<br>
-&#8249;script type="text/javascript"&#8250;<br>
-window.localStorage.setItem("name", "Domenic");
-//the above is equal to: localStorage.setItem("name", "Domenic");
-console.log(localStorage);
-&#8249;/script&#8250;
-Output: <br>
-{name: "Domenic", length: 1}
-</p>
                 </code>
                 <div class="blog-post-footer">
                   <h5>#: localStorage, setItem(), Objects in localStorage</h5>
@@ -639,7 +645,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Determine an Object to be Plain</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -648,7 +654,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Arrays - Assigning & Retrieving Values</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -657,7 +663,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Regular Expression Literal</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -666,7 +672,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Simple Template Literals</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -675,7 +681,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Addition (the + Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -684,7 +690,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Substraction (the - Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -693,7 +699,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Multiplication (the * Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -702,7 +708,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Division (the / Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -711,7 +717,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Remainder of a Division (the % Operator: Modulo)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -720,7 +726,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Is It Less Than? (the < Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -729,7 +735,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Is it Greater Than? (the > Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -738,7 +744,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Less than or Equal to (the <= Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -747,7 +753,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Greater than or Equal to (the >= Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -756,7 +762,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Are these Values Equivalent? (the == Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -765,7 +771,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Strictly Equal Values (the === Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -774,7 +780,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Not Equivalent Values (the != Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -783,7 +789,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Not Identical Values (the !=== Operator: Strictly Not Equal</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -792,7 +798,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Increase Value (++ Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -801,7 +807,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Decrement Value (the -- Operator)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -810,7 +816,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Coerce an Object to a Number (the + Operator: Unary Addition)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -819,7 +825,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Flip Number Sign (the - Operator: Unary Substraction)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -828,7 +834,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Toggling Boolean Values (the ! Operator: Logical NOT)</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -837,7 +843,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Deleting Objects, Properties, and Array Elements</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
                   <div class="theory"></div>
@@ -846,7 +852,7 @@ Output: <br>
 
               <div class="blog reveal">
                 <h3>Lorem, spsum dolor</h3>
-                <pre>Lorem, ipsum dolor.</pre>
+                <code></code>
                 <div class="blog-post-footer">
                   <h5>#: </h5>
                   <div class="theory"></div>
@@ -1577,6 +1583,7 @@ Output: <br>
                   <div class="theory"></div>
                 </div>
               </div>
+              -->
 
             </div>
           </div>

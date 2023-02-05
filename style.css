@@ -387,7 +387,7 @@ section#theory .section-main .main-theory-content {
 }
 
 section#home {
-  background: url("https://source.unsplash.com/bZZp1PmHI0E/1600x900") no-repeat
+  background: url("img/back_navy.png") no-repeat
     center center/cover;
   background-attachment: fixed;
   overflow-x: visible;
@@ -430,7 +430,15 @@ section.long {
 }
 
 section h1 {
+  letter-spacing: 6px;
+  font-weight: 400;
+  font-size: 2.5rem;
+
+}
+
+section h1 span {
   font-size: 2rem;
+
 }
 
 section p {
@@ -586,6 +594,8 @@ input[type="text"] {
 
 .content-equation {
   padding: 1rem;
+  max-width: 40%;
+  
 }
 
 .note-equations {
@@ -593,6 +603,22 @@ input[type="text"] {
   border-left: 1px solid #f4f4f4;
 }
 
+.more-examples {
+  width: 100%;
+}
+.more-examples .example {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.more-examples .title {
+  font-size: 0.7rem;
+}
+
+.example-left, .example-right {
+  margin:1rem;
+  width: auto;
+}
 
 
 .blog pre {
