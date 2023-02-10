@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sci Math - Mathematics</title>
+    <title>Sci Math - Computer Science</title>
     <link rel="icon" type="image/png" href="../../img/MSlogoXSBlack.png"/>
     <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
+
   </head>
   <body>
     <div class="main-container">
@@ -23,7 +25,7 @@
             <div class="menu-item"><a href="#home">Home</a></div>
             <div class="menu-item">
               
-              <a href="#">All Subjects</a>
+              <a href="#">AllSci </a>
               <table class="nav_list_drop" id="subjects-drop">
                 <tr><th rowspan="2">Physics</th><td><a href="#">School Physics</a></td></tr>
                 <tr><td><a href="../physics/relativity.html">Relativity</a></td></tr>
@@ -37,12 +39,18 @@
               </table>
             </div>
             <div class="menu-item">
-              <a href="#subjects">Mathematics Subjects</a>
+              <a href="#subjects">ComuterSci</a>
               <table class="nav_list_drop" id="subjects-drop">
-                <tr><td><a href="#kinematics">Kinematics</a></td><td><a href="#gravity">Gravity</a></td></tr>
-                <tr><td><a href="#motion-and-forces">Motion & Forces</a></td><td><a href="#electric-field">Electric Field</a></td></tr>
-                <tr><td><a href="#energy-and-momentum">Energy & Momentum</a></td><td><a href="#direct-current">Direct Current</a></td> </tr>
-                <tr><td><a href="#rigid-body">Rigid Body</a></td><td><a href="#magnetic-field">Magnetic Field</a></td></tr>
+                <tr><td rowspan="4"><a href="#computer_networks">Computer Networks</a></td>
+                  <td><a href="#cn_basics">Basic Notions</a></td></tr>
+                <tr>
+                  <td><a href="#tcp_ip_iso_osi">ISO/OSI & TCP/IP Layered Models</a></td></tr>
+                <tr>
+                  <td><a href="#app_layer">Application Layer Protocols</a></td> </tr>
+                <tr>
+                  <td><a href="#tr_layer">Transport Layer Protocols</a></td>
+                </tr>
+                <tr><td><a href="#tr_layer">Transport Layer Protocols</a></td><td><a href="#magnetic-field">Magnetic Field</a></td></tr>
                 <tr><td><a href="#oscillating-motion">Oscillating Motion</a></td><td><a href="#induction-and-alternating-current">Electromagnetic Induction & Alternating Current</a></td></tr>
                 <tr><td><a href="#mechanical-waves">Mechanical Waves</a></td><td><a href="#em-waves-and-optics">Electromagnetic Waves & Optics</a></td></tr>
                 <tr><td><a href="#thermodynamics">Thermodynamics</a></td><td><a href="#atomic-and-quanta">Atomic Physics & Quanta of Electromagnetic Radiation</a></td></tr>
@@ -50,22 +58,99 @@
               </table>
             </div>
             <div class="menu-item"><a href="#blog">Blog</a></div>
+            <div class="menu-item quiz"><a href="./quiz.html">Quiz</a></div>
           </div>
         </div>
         
       </header> 
 
       <section class="simple" id="home">
-        <div class="section-title" id="theory">
-        </div>
-        <div class="section-content">
-         
-        </div>
-          <h4></h4>
-        
-        
+        <h1>M<span>adej</span> S<span>ci</span>M<span>ath</span></h1>
+        <p>Computer Science - Theory, Examples and Quizzes</p>
         <div class="section-footer"></div>
       </section>
+
+      <section class="simple" id="computer_networks">
+        <h1>M<span>adej</span> S<span>ci</span>M<span>ath</span></h1>
+        <p>Computer Science - Theory, Examples and Quizzes</p>
+        <div class="section-footer"></div>
+      </section>
+
+      <section class="simple" id="tcp_ip_iso_osi">
+        <h1><span>TCP/IP & ISO/OSI </span>L<span>ayered</span> M<span>odels</span></h1>
+        <p>Overview of communication process on the example of ISO/OSI and TCP/IP layered models.</p>
+        <h2>Why do we need models?</h2> <!--h2 css not working: the size is the same as of p tag-->
+        <p>Mutual communication of devices in a computer network consists of several <!--p tag does not fit in the page when small-->
+          stages and several elements. Each of them is equally important 
+          because the tasks necessary for proper communication are carried
+           out on each of them. These stages are defined by so-called layered models. 
+           Each of you who has already met with layered models knows that 
+           understanding this topic is the foundation for gaining further 
+          knowledge and skills in the field of computer networks.
+        </p>
+        <p>There are two layered models, the TCP/IP model and the ISO/OSI reference model.
+          (((OSI - the Open System Interconnect Seven-Layer Model, ISO - International Standards
+          Organization, TCP - Transmission Control Protocol, IP - Internet Protocol)))
+          On the one hand, they are similar to each other, but on the other, each of the models is 
+          characterized by a slightly different approach to the way of communication.
+          However, before we discuss both of these models and explain the differences between them,
+          we will tell what for and why they are used at all, what is their role and what are the
+          benefits of their use.
+        </p>
+        <p>The division of the network communication process into individual layers
+          brings many benefits, the most important of which are:
+          <ul>  
+            <li>easier definition of the rules and principles of communication
+               (these rules and principles are called communication protocols),
+            </li>
+            <li>the ability of network devices and software from different manufacturers
+               to interact with each other, </li>
+            <li>the possibility of easier understanding of the entire communication process,</li>
+            <li>the ability to manage the communication process.</li>
+          </ul>
+        </p>
+        <p>Before the data from the source device are sent to the end device,
+          they must go through a long way, during which they are first marked, tagged, described
+          with specific information allowing for their identification, then they are sent 
+          between many intermediary devices until they reach the recipient, who then is to
+          interpret the data.
+        </p>
+        <p>
+          If there was no model that divides communication into smaller, easer to understand and
+          manage stages and defines the tasks that must be performed on individual layers,
+          it would be difficult to properly manage network communication because the multitude of
+          solutions and technologies would cause huge chaos, difficult to Control. Let's imagine
+          a situation where such a division into layers does not exist. There are no rules 
+          describing communication, and each hardware and software manufacturer creates its own,
+          independent system.
+        </p>
+        <p>
+          Obviously, within the solutions of one company, communication would run very 
+          efficiently and fast, but the solutions of two independent companies could be 
+          incompatible with one another. In fact, in practice, we use network hardware and software 
+          from different companies, and this is possible thankds to the division into 
+          individual layers, which contain rules ans tasks describing their operation.
+          These rules and tasks are the same for everyone, but each company, each manufacturer
+          of both hardware and software can implement them in their own way.
+        </p>
+        <p>The best example to illustrate it are operating systems. Some users use Windows,
+          some use one of the Linux distributions, and others use MacOP.
+          Each one of these systems is different, each performs network tasks in a different way, 
+          but in the end, on each of these systems, the website or e-mail will look the same,
+          or at least similar. Thus, the most important benefits of using layered models include:
+          <ul>
+            <li>managing the communication process in the network,</li>
+            <li>defining its rules and tasks,</li>
+            <li>the possibility of interoperability at the hardware and software level of
+              network products from different manufacturers, 
+            </li>
+            <li>and checking the correctness of communication.</li>
+          </ul>
+        </p>
+        <div class="section-footer"></div>
+      </section>
+
+      
       
       <section id="blog">
         <div class="search-main-container">
@@ -749,9 +834,12 @@
           </div>
         </div>
       </section>
+
+    
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../../main.js"></script>
+
   </body>
 </html>
 
