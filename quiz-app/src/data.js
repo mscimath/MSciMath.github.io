@@ -28,4 +28,34 @@ const data = [
         ],
         correct: "d",
     },
+
+    {
+        question: "What is React.StrictMode?",
+        incorrect: [
+            "",
+            "",
+            "",
+        ],
+        correct: "",
+    },
+
+    {
+        question: "What is context in React (a global object)?",
+        incorrect: [
+            "",
+            "",
+            "",            
+        ],
+        correct: "",
+    },
+
+    {
+        question: "What is useReducer hook used for in React?",
+        incorrect: [
+            "",
+            "",
+            "",
+        ],
+        correct: "",
+    },
 ]
