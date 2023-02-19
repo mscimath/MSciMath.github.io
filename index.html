@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sci Math</title>
-    <link rel="icon" type="image/png" href="img/MSlogoXSBlackAndWhite.png"/>
+    <link rel="icon" type="image/png" href="img/MSlogoXSBlack.png"/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,7 +13,7 @@
       <header class="main-header" id="main-header">
         <div class="top-header" id="top-header">
           <div class="logo">
-            <a href="#home"><img src="img/MSlogoSBlackAndWhite.png" alt="Madej SciMaths"/></a>
+            <a href="#home"><img src="./img/MSlogoXSDF.png" alt="Madej SciMaths"/></a>
           </div>
           <div class="menu nav_list">
             <div class="menu-item">
@@ -32,7 +32,7 @@
               </table>
             </div>
             <div class="menu-item"><a href="#about">About</a></div>
-            <div class="menu-item"><a href="https://mscimath.github.io/JsQuiz/">Quiz</a></div>
+            <div class="menu-item"><a href="https://mscimath.github.io/JsQuiz/" target="_blank">Quiz</a></div>
             <div class="menu-item"><a href="#blog">Blog</a></div>
           </div>
         </div>
@@ -45,6 +45,9 @@
           another <code><a href="#subjects">subject</a></code>.</p>
           <p>Or perhaps you just want to read on some interesting tech topic in the 
           <code><a href="#blog">Blog</a></code> Section?</p>
+          <div><a href="./MyComponent/component.html">component</a></div>
+          <div id="my_component" ></div>
+          <div id="joke_generator"></div>
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="about">
@@ -386,5 +389,20 @@ Example of a just a little more complex call stack:
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Load our React component. -->
+    <script type="text/babel" src="./WelcomeBack.js"></script>
+    <script type="text/babel" src="./CoolButton.js"></script>
+    <script type="text/babel" src="./JokeGenerator.js"></script>
+
+    <script type="text/babel">
+    ReactDOM.render(<WelcomeBack/>, document.querySelector('#my_component'));
+    ReactDOM.render(<JokeGenerator/>, document.querySelector('#joke_generator'));
+    </script>
   </body>
 </html>

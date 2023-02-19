@@ -59,6 +59,20 @@ body {
   padding-bottom: 2px;
 }
 
+.menu .menu-item a:hover {
+  color: #f4f4f4;
+}
+
+.main-container a {
+  text-decoration: none;
+  color: #f4f4f4;
+  transition: all 400ms;
+}
+
+.main-container a:hover {
+  color: rgb(187, 221, 210); 
+}
+
 /* Logo */
 .logo {
   display: block;
@@ -71,11 +85,6 @@ body {
 
 .logo img {
   width: 100%;
-}
-
-.menu .menu-item a {
-  text-decoration: none;
-  color: #f4f4f4;
 }
 
 /*Dropdown Nav */
@@ -122,10 +131,6 @@ table.nav_list_drop a {
 }
 .nav_list_drop td a {
   transition: all 400ms;
-}
-
-.nav_list_drop td a:hover {
-  color: rgb(187, 221, 210);
 }
 
 /* Bottom line animation */
@@ -445,10 +450,6 @@ section p {
   font-size: 1.5;
   overflow-x: visible;
 
-}
-
-.simple a {
-  text-decoration: none;
 }
 
 section .section-footer {
