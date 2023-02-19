@@ -57,7 +57,7 @@ function responsiveScreen() {
     header.style.maxWidth = "100vw";
     //menu.style.justifyContent = "left";
     logo.style.marginRight = "50px"
-    menuItemsList.forEach(element => element.style.fontSize = "10px");
+    menuItemsList.forEach(element => element.style.fontSize = "12px");
     menuItemsList.forEach(element => element.style.padding = "4px");
     subjectsLink.href = "#";
 

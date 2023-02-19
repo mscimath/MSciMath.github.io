@@ -17,7 +17,7 @@
           </div>
           <div class="menu nav_list">
             <div class="menu-item">
-              <a href="#home">Home</a>
+              <a href="#home">Up</a>
             </div>
             <div class="menu-item">
               <a href="#subjects">Subjects</a>
@@ -39,8 +39,8 @@
         
       </header>
       <section class="simple" id="home">
-        <div id="main_title"></div>
-        <h1>Science & Mathematics Bits and Pieces</h1>
+        <div class="main_title"></div>
+        <div class="title_addition"></div>
         <p>Learn <code><a href="menuItems/mathematics/schoolmathematics.html">School Mathematics</a></code> 
           or <code><a href="menuItems/mathematics/highermathematics.html">Higher Level Mathematics</a></code> or 
           another <code><a href="#subjects">subject</a></code>.</p>
@@ -52,6 +52,7 @@
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="about">
+        <canvas id="background-animation"></canvas>
         <h1>Science & Maths Site</h1>
         <p>lorem lorem</p>
         <div class="section-footer"></div>
@@ -400,10 +401,14 @@ Example of a just a little more complex call stack:
     <script type="text/babel" src="./components/WelcomeBack.js"></script>
     <script type="text/babel" src="./components/CoolButton.js"></script>
     <script type="text/babel" src="./components/JokeGenerator.js"></script>
+    <script type="text/babel" src="./components/MainTitle.js"></script>
+    <script type="text/babel" src="./components/TitleAddition.js"></script>
 
     <script type="text/babel">
     ReactDOM.render(<WelcomeBack/>, document.querySelector('#my_component'));
     ReactDOM.render(<JokeGenerator/>, document.querySelector('#joke_generator'));
+    ReactDOM.render(<MainTitle/>, document.querySelector('.main_title'));
+    ReactDOM.render(<TitleAddition/>, document.querySelector('.title_addition'));
     </script>
   </body>
 </html>
