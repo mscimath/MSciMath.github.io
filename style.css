@@ -307,14 +307,25 @@ section {
 }
 
 /*Section Subjects on Home Page*/
-#subjects-table {
-  
+
+
+/*Longer Theory*/
+.theory-content {
+  line-height: 1.5rem;
+  overflow-x: visible;
+
 }
+
 /*Subjects Menu*/
 .section-content {
   display: flex;
   flex-direction: row;
 }
+
+/*Add to xs screen plus flex-direction: row to .section-content
+table.theory-subjects td {
+  display: none;
+}*/
 
 table.theory-subjects {
   margin: 30px auto 0 auto;
@@ -324,20 +335,6 @@ table.theory-subjects {
   border-spacing: 30px 0px;
   border-collapse: separate;
 }
-/*Longer Theory*/
-.theory-content {
-  line-height: 1.5rem;
-  overflow-x: visible;
-
-}
-
-table#subjects-drop{
-}
-
-/*Add to xs screen plus flex-direction: row to .section-content
-table.theory-subjects td {
-  display: none;
-}*/
 
 table.theory-subjects tr {
   display: table-row;
@@ -350,7 +347,7 @@ table.theory-subjects a {
   padding-bottom: 10px;
   align-items: center;
 }
-table.theory-subjects a img {
+table.theory-subjects a img, .table-dot {  /*Po przeniesieniu wszystkich tabel do Komponentów, usunąć tu pointer na 'table.theory-subjects a img'*/
   padding-right: 3px;
   height: 18px;
 }
