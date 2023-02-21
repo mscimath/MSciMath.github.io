@@ -46,9 +46,7 @@
           another <code><a href="#subjects">subject</a></code>.</p>
           <p>Or perhaps you just want to read on some interesting tech topic in the 
           <code><a href="#blog">Blog</a></code> Section?</p>
-          <div><a href="./MyComponent/component.html">component</a></div>
-          <div id="my_component" ></div>
-          <div id="joke_generator"></div>
+          
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="about">
@@ -391,6 +389,7 @@ Example of a just a little more complex call stack:
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <script src="./components/data.js"></script>
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
@@ -403,12 +402,12 @@ Example of a just a little more complex call stack:
     <script type="text/babel" src="./components/JokeGenerator.js"></script>
     <script type="text/babel" src="./components/MainTitle.js"></script>
     <script type="text/babel" src="./components/TitleAddition.js"></script>
-
+    
     <script type="text/babel">
-    ReactDOM.render(<WelcomeBack/>, document.querySelector('#my_component'));
-    ReactDOM.render(<JokeGenerator/>, document.querySelector('#joke_generator'));
+    
+    
     ReactDOM.render(<MainTitle/>, document.querySelector('.main_title'));
-    ReactDOM.render(<TitleAddition/>, document.querySelector('.title_addition'));
+    ReactDOM.render(<TitleAddition name=""/>, document.querySelector('.title_addition'));
     </script>
   </body>
 </html>

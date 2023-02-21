@@ -2,7 +2,7 @@ class WelcomeBack extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            name: 'J',
+            name: 'O',
             appVersion: '1'
         }
     }
