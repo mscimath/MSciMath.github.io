@@ -192,6 +192,12 @@ var contents = [
                         }
                     ]
                 },
+                
+            ]
+    },
+    {
+        table:
+            [
                 {
                     unit: "Arrays",
                     subjects: [
@@ -208,36 +214,162 @@ var contents = [
                             href: "#"
                         },
                         {
-                            
-                        }
-                    ]
-                }
-            ]
-    },
-    {
-        table:
-            [
-                {
-                    unit: "Variable Declarations and Their Types",
-                    subjects: [
-                        {
-                            subject: "Creating Variables in JavaScript",
+                            subject: "for... of and forEach Loops",
                             href: "#"
-                        }, 
+                        },
                         {
-                            subject: "Data Types in Javascript",
+                            subject: "map & flatMap Methods",
+                            href: "#"
+                        },
+                        {
+                            subject: "reduce & reduceRight Methods",
+                            href: "#"
+                        },
+                        {
+                            subject: "Searching Methods",
+                            href: "#"
+                        },
+                        {
+                            subject: "Sorting",
+                            href: "#"
+                        },
+                        {
+                            subject: "Array Constructor and Array.from Method",
+                            href: "#"
+                        },
+                        {
+                            subject: "Array Conversion",
+                            href: "#"
+                        },
+                        {
+                            subject: "Comparison of Arrays",
                             href: "#"
                         }
                     ]
                 },
                 {
-                    unit: "Types Conversion",
+                    unit: "Objects",
                     subjects: [
                         {
-                            subject: "Explicit and Implicit Conversion"
+                            subject: "Objects in JavaScript - basic concepts",
+                            href: "#"
+                        },
+                        {
+                            subject: "Methods on Objects",
+                            href: "#"
+                        },
+                        {
+                            subject: "Different Ways of Creating Objects in JavaScript",
+                            href: "#"
+                        },
+                        {
+                            subject: "Configuration of Object Fields in JavaScript",
+                            href: "#"
+                        },
+                        {
+                            subject: "Navigating around JavaScript Objects",
+                            href: "#"
+                        },
+                        {
+                            subject: "Spread and Rest operators with Objects",
+                            href: "#"
+                        },
+                        {
+                            subject: "Destructuring Objects",
+                            href: "#"
+                        },
+                        {
+                            subject: "Referencing and Comparing Objects",
+                            href: "#"
+                        },
+                        {
+                            subject: "Copying and Joining Objects",
+                            href: "#"
                         }
-                    
                     ]
+                },
+                {
+                    unit: "Prototypes",
+                    subjects: [
+                        {
+                            subject: "Prototypical Inheritance",
+                            href: "#"
+                        },
+                        {
+                            subject: "Prototype Chain and Own Prototypes",
+                            href: "#"
+                        },
+                        {
+                            subject: "Overriding Prototype Methods",
+                            href: "#"
+                        },
+                        {
+                            subject: "Not Using proto",
+                            href: "#"
+                        },
+                        {
+                            subject: "Function Prototype",
+                            href: "#"
+                        }
+                    ]
+                },
+                {
+                    unit: "Classes",
+                    subjects: [
+                        {
+                            subject: "JavaScript Classes",
+                            href: "#"
+                        },
+                        {
+                            subject: "Static Fields and Methods",
+                            href: "#"
+                        },
+                        {
+                            subject: "Inheritance",
+                            href: "#"
+                        },
+                        {
+                            subject: "Extending Base Classes",
+                            href: "#"
+                        },
+                        {
+                            subject: "typeof and instanceof Operators",
+                            href: "#"
+                        }
+                    ]
+                },
+                {
+                    unit: "This",
+                    subjects: [
+                        {
+                            subject: "What is this in JavaScript?",
+                            href: "#"
+                        },
+                        {
+                            subject: "This in Objects",
+                            href: "#"
+                        },
+                        {
+                            subject: "This and Arrow Functions",
+                            href: "#"
+                        },
+                        {
+                            subject: "Binding Lost this",
+                            href: "#"
+                        },
+                        {
+                            subject: "Bind Method",
+                            href: "#"
+                        },
+                        {
+                            subject: "Call and Apply Methods",
+                            href: "#"
+                        }
+                    ]
+                },
+                {
+                    unit: "Additional Information",
+                    href: "#"
                 }
             ]
     }
