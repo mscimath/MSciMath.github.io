@@ -35,11 +35,11 @@
             <div class="menu-item"><a href="#blog">Blog</a></div>
           </div>
         </div>
-        
+
       </header>
       <section class="simple" id="home">
         <div class="main_title"></div>
-        
+
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="theory">
@@ -47,7 +47,7 @@
           <h1>JavaScript in Theory</h1>
           <p>Examples with Full Solutions</p>
         </div>
-          <div class="array_section"></div>
+
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="subjects">
@@ -78,8 +78,8 @@ var objB = {
 var objC = Object.assign({}, objA, objB); <!--Zrobic tak, zeby javascript mierzyl szerokosc backgroundu i jesli tekst jest dluzszy dodawal enter po ostatniej spacji od prawej granicy backgroundu-->
 console.log(objC);
 
-output: {age: '6', 
-         city: 'Paris', 
+output: {age: '6',
+         city: 'Paris',
          experience: '1'}
             </pre>
                 <div class="blog-post-footer">
@@ -140,7 +140,7 @@ for (let [key, value] of zoo) {
   console.log(key + ':' + value);
 }
 
-output: 
+output:
 Map(3) {"Zebra" => 5, "Gorilla" => 2, "Monkey" => 76}
 5
                 </pre>
@@ -160,7 +160,7 @@ for (i = 2; i > 0; i--){
 }
 console.log(arr.length*i);
 
-output: 
+output:
 [empty x 2, 2]
 [empty, 1, 2]
 0
@@ -228,12 +228,12 @@ hint: Assignment to a constant variable.
               <div class="blog reveal">
                 <h3>if statement</h3>
                 <pre>
-Can the if statement be used 
+Can the if statement be used
 without the else part?
 
-answer: yes, if the 'if' part 
-is not true, the code just 
-jumps over it and proceeds 
+answer: yes, if the 'if' part
+is not true, the code just
+jumps over it and proceeds
 with the next thing on the stack.
                 </pre>
                 <div class="blog-post-footer">
@@ -257,18 +257,18 @@ alert(date.getFullYear());
               <div class="blog reveal">
                 <h3>Thread of Execution and the Call Stack</h3>
                 <pre>
-Javascript is not a asynchronous language, 
-it is a synchronous language with asynchronous 
+Javascript is not a asynchronous language,
+it is a synchronous language with asynchronous
 capabilities.
 JavaScript is a single-threaded language.
-Thread is a single sequential flow of 
+Thread is a single sequential flow of
 control - a process of a program:
   Thread of execution:
   op1 -> op2 -> op3 -> op4 -> Call Stack
                            -> Memory Heap
 
-The Call Stack keeps track of functions (a stack 
-of functions) to be executed & manages execution 
+The Call Stack keeps track of functions (a stack
+of functions) to be executed & manages execution
 contexts. The Stacks are LIFO (last in first out).
 
   Call Stack :  third()
@@ -294,7 +294,7 @@ Example of a simple call stack:
 
                   output: first...
                           second...
-                          third... 
+                          third...
 
 Example of a just a little more complex call stack:
                   function first() {
@@ -310,9 +310,9 @@ Example of a just a little more complex call stack:
                   };
                   first();
 
-                  output: first... 
-                          second... 
-                          third... 
+                  output: first...
+                          second...
+                          third...
 
 
                 </pre>
@@ -332,10 +332,10 @@ Example of a just a little more complex call stack:
 //HTML Markup
 &#8249;div id="A"&#8250;
 &#8199;&#8249;div id="B"&#8250;
-&#8199;&#8199;&#8249;div id="C"&#8250;Click Here&#8249;/div&#8250; 
-&#8199;&#8249;/div&#8250; 
-&#8249;/div&#8250;  
-    
+&#8199;&#8199;&#8249;div id="C"&#8250;Click Here&#8249;/div&#8250;
+&#8199;&#8249;/div&#8250;
+&#8249;/div&#8250;
+
 //JavaScript
 document.querySelectorAll("div").forEach(e => {
   e.onclick = e => console.log(e.currentTarget.id);
@@ -350,8 +350,8 @@ document.querySelectorAll("div").forEach(e => {
               <div class="blog reveal">
                 <h3>Local Storage</h3>
                 <code>
-- What is kept in Local Storage is accesibble through all directories (i.g. tabs in a browser), 
-meaning if a variable is set for local storage in one tab, it can be displayed or accessed 
+- What is kept in Local Storage is accesibble through all directories (i.g. tabs in a browser),
+meaning if a variable is set for local storage in one tab, it can be displayed or accessed
 in another tab of the browser.
 - The data does not expire, unless we clear it programatically.
 <p>//CSS Style<br>
@@ -477,33 +477,33 @@ Output: <br>
                   <br>
                   if ( date instanceof Date ) {<br>
                   &nbsp;  document.write("date is an instance of Date");<br>
-                  } else if ( date instanceof Error ) {<br> 
+                  } else if ( date instanceof Error ) {<br>
                   &nbsp;  document.write("date is an Error instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp;  document.write("date is an unknown instance")<br>
                   }<br>
                   <br>
                   if ( error instanceof Date ) {<br>
                   &nbsp;  document.write("error is an instance of Date");<br>
-                  } else if ( error instanceof Error ) {<br> 
+                  } else if ( error instanceof Error ) {<br>
                   &nbsp;  document.write("error is an Error instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp;  document.write("error is an unknown instance")<br>
                   }<br>
                   <br>
                   if ( blob instanceof Date ) {<br>
                   &nbsp;  document.write("blob is an instance of Date");<br>
-                  } else if ( blob instanceof Error ) {<br> 
+                  } else if ( blob instanceof Error ) {<br>
                   &nbsp;  document.write("blob is an Error instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp;  document.write("blob is an unknown instance")<br>
                   }<br>
                   <br>
                   if ( object instanceof Date ) {<br>
                   &nbsp;  document.write("object is an instance of Date");<br>
-                  } else if ( object instanceof Error ) {<br> 
+                  } else if ( object instanceof Error ) {<br>
                   &nbsp;  document.write("object is an Error instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp;  document.write("object is an unknown instance")<br>
                   }<br>
                   <br>
@@ -528,44 +528,44 @@ Output: <br>
                   <br>
                   if (date.constructor === Date){<br>
                     &nbsp;  console.log("date is a Date Instance");<br>
-                  } else if ( date.constructor === Error ) {<br> 
+                  } else if ( date.constructor === Error ) {<br>
                     &nbsp;  console.log("date is an Error Instance");<br>
-                  } else if ( date.constructor === Blob ) { <br> 
+                  } else if ( date.constructor === Blob ) { <br>
                   &nbsp;  console.log("date is a Blob Instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp; console.log("date is an unknown instance");<br>
                   }<br>
                   <br>
                   if (error.constructor === Date){<br>
                     &nbsp;  console.log("error is a Date Instance");<br>
-                  } else if ( error.constructor === Error ) {<br> 
+                  } else if ( error.constructor === Error ) {<br>
                     &nbsp;  console.log("error is an Error Instance");<br>
-                  } else if ( error.constructor === Blob ) { <br> 
+                  } else if ( error.constructor === Blob ) { <br>
                   &nbsp;  console.log("error is a Blob Instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp; console.log("error is an unknown instance");<br>
                   }<br>
                   <br>
                   if (blob.constructor === Date){<br>
                     &nbsp;  console.log("blob is a Date Instance");<br>
-                  } else if ( blob.constructor === Error ) {<br> 
+                  } else if ( blob.constructor === Error ) {<br>
                     &nbsp;  console.log("blob is an Error Instance");<br>
-                  } else if ( blob.constructor === Blob ) { <br> 
+                  } else if ( blob.constructor === Blob ) { <br>
                   &nbsp;  console.log("blob is a Blob Instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp; console.log("blob is an unknown instance");<br>
                   }<br>
                   <br>
                   if (object.constructor === Date){<br>
                     &nbsp;  console.log("object is a Date Instance");<br>
-                  } else if ( object.constructor === Error ) {<br> 
+                  } else if ( object.constructor === Error ) {<br>
                     &nbsp;  console.log("object is an Error Instance");<br>
-                  } else if ( object.constructor === Blob ) { <br> 
+                  } else if ( object.constructor === Blob ) { <br>
                   &nbsp;  console.log("object is a Blob Instance");<br>
-                  } else {<br> 
+                  } else {<br>
                   &nbsp; console.log("object is an unknown instance");<br>
                   }<br>
-                  
+
                 </code>
                 <div class="blog-post-footer">
                   <h5>#: switch, break, document.write()</h5>
@@ -837,25 +837,25 @@ Output: <br>
               <div class="blog reveal">
                 <h3>Are the Two Strings Equal?</h3>
                 <code>
-                  if ('hello' === 'goodbye') {<br> 
+                  if ('hello' === 'goodbye') {<br>
                   console.log('"hello" is equal to "goodbye".'); <br>
                 } else {<br>
                   console.log('"hello" is not equal to "goodbye".');<br>
                 }<br>
                 <br>
-                if ('A' === 'a') {<br> 
+                if ('A' === 'a') {<br>
                   console.log('"A" is equal to "a".'); <br>
                 } else {<br>
                   console.log('"A" is not equal to "a".');<br>
                 }<br>
                 <br>
-                if ('hello' === '\u0068\u0065\u006c\u006c\u006f') {<br> 
+                if ('hello' === '\u0068\u0065\u006c\u006c\u006f') {<br>
                   console.log('"hello" is equal to "\u0068\u0065\u006c\u006c\u006f".'); <br>
                 } else {<br>
                   console.log('"hello" is not equal to "\u0068\u0065\u006c\u006c\u006f".');<br>
                 }<br>
                 <br>
-                if ('Alan' === '\u0391\u006C\u0430\u006E') {<br> 
+                if ('Alan' === '\u0391\u006C\u0430\u006E') {<br>
                   console.log('"Alan" is equal to "\u0391\u006C\u0430\u006E" ("Alan").'); <br>
                 } else {<br>
                   console.log('"Alan" is not equal to "\u0391\u006C\u0430\u006E" ("Alan").');<br>
@@ -877,9 +877,9 @@ Output: <br>
                 <h3>the Length of a String</h3>
                 <code>
                   <p>
-                    .length is reffered to as a getter, otherwise automatic property 
-                    (called on accessing the function). It returns the number of unicode code units 
-                    that are needed to represent the string given. It might differ for some emoticons for example, 
+                    .length is reffered to as a getter, otherwise automatic property
+                    (called on accessing the function). It returns the number of unicode code units
+                    that are needed to represent the string given. It might differ for some emoticons for example,
                     as these take two units to be written.
                   </p>
                   console.log('"hello" is ' + ('hello'.length) + ' characters long.');<br>
@@ -896,7 +896,7 @@ Output: <br>
                   "0061" is 4 characters long.<br>
                   "a" is 1 characters long.<br>
                   "length" is 6 characters long.<br>
-                  "MixedUnicode" is 12 characters long.<br> 
+                  "MixedUnicode" is 12 characters long.<br>
                   "\uD83D\uDCD6" is 2 characters long ###- tu altkody albo js
                 </code>
                 <div class="blog-post-footer">
@@ -910,10 +910,10 @@ Output: <br>
                 <code>
                   var word = 'can be';
                   var word2 = 'string';
-                  console.log('String' + ' ' + 
-                  'concatenation ' + word + ' ' + 'performed on ' + 'multiple' + ' ' + 
+                  console.log('String' + ' ' +
+                  'concatenation ' + word + ' ' + 'performed on ' + 'multiple' + ' ' +
                   word2 + 's ' + '& ' + "variables at once.")<br>
-                  //logs: String concatenation can be performed on 
+                  //logs: String concatenation can be performed on
                   multiple strings & variables at once.<br>
                   <br>
                   document.write('A' + '\uD83D' + '\uDCD6');<br>
@@ -960,7 +960,7 @@ Output: <br>
                 <h3>UTF Code to String Conversion with fromCharCode()</h3>
                 <code>
                   <p>
-                    It is an ES6 feature. 
+                    It is an ES6 feature.
                   </p>
                 </code>
                 <div class="blog-post-footer">
@@ -991,7 +991,7 @@ Output: <br>
                 <h3>codePointAt()</h3>
                 <code>
                   <p>
-                    String.prototype.codePointAt() returns 
+                    String.prototype.codePointAt() returns
                     the UTF code point at the provided index.
                   </p>
                 </code>
@@ -1052,8 +1052,8 @@ Output: <br>
                 <h3>repeat()</h3>
                 <code>
                   <p>
-                    Note: String.prototype.repeat() is an ES6 feature. 
-                    It is an independent method as all string methods are, which means that it 
+                    Note: String.prototype.repeat() is an ES6 feature.
+                    It is an independent method as all string methods are, which means that it
                     does not change the original string .
                     It operates on code units.<br>
                     Syntax: String.prototype(number), where 'number' is the amount of repetitions
@@ -1128,7 +1128,7 @@ Output: <br>
               <div class="blog reveal">
                 <h3>Accessing Elements in an Array</h3>
                 <code>
-			var daysArray = new Array('monday', 'tuesday', 'wednesday');<br> 
+			var daysArray = new Array('monday', 'tuesday', 'wednesday');<br>
 			daysArray[0] //returns monday
 			daysArray[3] //returns undefined
 			daysArray.slice(0, ) //returns all the items from the array
@@ -1156,8 +1156,8 @@ Output: <br>
               <div class="blog reveal">
                 <h3>Initializing an Array with Values</h3>
                 <code>
-                  <p>When using the Array constructor more than one value have to be 
-                    passed, otherwise JS will set this value as the length of the 
+                  <p>When using the Array constructor more than one value have to be
+                    passed, otherwise JS will set this value as the length of the
                     Array. To avoid it place the number between quotation marks. </p>
             			var itemArr = new Array('item 1', 'item 2', 'item 3', 'item 4', 'item 5');<br>
             			var itemArrLiteral = ['item1', 'item2', 'item3', 'item4', 'item5'];<br>
@@ -1188,7 +1188,7 @@ Output: <br>
                 <h3>Array into String Conversion</h3>
                 <code>
                   <p>
-                    The .toString() method creates a string separated by commas. 
+                    The .toString() method creates a string separated by commas.
                     It may be good solution to assign this doing to save the outcome (as
                     shown with the 'var myNbrStr' below).<br>
                     The .join('separator') method creates a string of the Array elements separated
@@ -1211,7 +1211,7 @@ Output: <br>
                 <h3>Add an Element to the End of an Array</h3>
                 <code>
                   <p>
-                    The .push() method adds an element to the end of the array 
+                    The .push() method adds an element to the end of the array
                     and returns the length of the new array.
                   </p>
             			var weekArray = new Array('Monday', 'Tuesday');<br>
@@ -1219,7 +1219,7 @@ Output: <br>
                   weekArray[4] = 'Thursday'; <br>
                   weekArray[5] = 'Friday'; <br>
                   <br>
-            			console.log(weekArray)  &nbsp;  //returns ['Monday', 'Tuesday', 
+            			console.log(weekArray)  &nbsp;  //returns ['Monday', 'Tuesday',
                   'Wednesday', 'Thursday', 'Friday'] <br>
             		</code>
                 <div class="blog-post-footer">
@@ -1257,7 +1257,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1269,7 +1269,7 @@ Output: <br>
                 <h3>Appending One Array to the End of Another</h3>
                 <code>
                   <p>
-                                     
+
                   </p>
             			var oneArr = [1, 2, 3, 4];<br>
             			var secondArr = [5, 6, 7, 8, 9];<br>
@@ -1279,7 +1279,7 @@ Output: <br>
                   console.log(bothArrs);  //returns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
                   bothArrs[2] = 12;<br>
                   console.log(bothArrs);  //returns: [0, 1, 12, 3, 4, 5, 6, 7, 8, 9]<br>
-                  console.log(oneArr); //returns: [1, 2, 3, 4] - the above lines had 
+                  console.log(oneArr); //returns: [1, 2, 3, 4] - the above lines had
                   no impact on the original array<br>
 
             		</code>
@@ -1299,7 +1299,7 @@ Output: <br>
             			var numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];<br>
             			numArr.reverse()<br>
                   console.log(numArr);&nbsp; //returns: [9, 8, 7, 6, 5, 4, 3, 2, 1]<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .reverse(), 'in place' change, array literal</h5>
@@ -1311,12 +1311,12 @@ Output: <br>
                 <h3>.copyWithin() Method - Copy Elements within an Array</h3>
                 <code>
                   <p>
-                    
+
                   </p>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .copyWithin() </h5>
@@ -1335,7 +1335,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1354,7 +1354,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1373,7 +1373,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1392,7 +1392,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1411,7 +1411,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1430,7 +1430,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1449,7 +1449,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1468,7 +1468,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1487,7 +1487,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1506,7 +1506,7 @@ Output: <br>
             			var sameArr = new Array(7);<br>
             			sameArr.fill('value', 0,)<br>
                   console.log(sameArr);&nbsp; //returns['value', 'value', 'value', 'value', 'value', 'value', 'value']<br><br>
-            		
+
             		</code>
                 <div class="blog-post-footer">
                   <h5>#: .fill(), array instance</h5>
@@ -1530,11 +1530,9 @@ Output: <br>
 
     <!-- Load our React component. -->
     <script type="text/babel" src="../components/MainTitle.js"></script>
-        <script type="text/babel" src="../components/ArrayComponent.js"></script>
 
     <script type="text/babel">
     ReactDOM.render(<MainTitle/>, document.querySelector('.main_title'));
-    ReactDOM.render(<ArrayComponent/>, document.querySelector('.array_section'));
 
     </script>
   </body>
