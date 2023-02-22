@@ -1,18 +1,3 @@
-var objects = [{
-    objA : {
-    age: "8",
-    city: "Porto"
-    },
-    objB : {
-        age: "6",
-        city: "Paris",
-        experience: "1"
-      }
-}]
-
-var objC = Object.assign({}, objects.objA, objects.objB); 
-console.log(objC.age, objC.city, objC.experience);
-
 var contents = [   
     {
         table:
@@ -196,8 +181,7 @@ var contents = [
             ]
     },
     {
-        table:
-            [
+        table: [
                 {
                     unit: "Arrays",
                     subjects: [
@@ -369,13 +353,14 @@ var contents = [
                 },
                 {
                     unit: "Additional Information",
-                    href: "#"
+                    href: "#",
+                    subjects: []
                 }
             ]
     }
 ]
 
-class ArrayComponent extends React.Component {
+class JsSubjects extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -388,24 +373,19 @@ class ArrayComponent extends React.Component {
         return(
             <>
                 <div className="section-content">                   
-                        {contents.map((item) => 
-                        <table key={item.id} className="theory-subjects">  
-                            {item.table.map((subitem) =>
-                                <>
-                                    <tr>
-                                        <th>{subitem.unit}</th>
-                                    </tr>
-                                    {subitem.subjects.map((subject) =>
-                                        <tr key={subject.id}>
-                                            <td>
-                                                {subject.subject}
-                                            </td>
-                                        </tr>
-                                    )}
-                                </>
-                            )}                            
-                        </table>   
-                        )}                    
+                {contents.map((tableItem) => 
+                    <div >
+                        {tableItem.table.map(unitItem =>
+                        <div class='menu-item'>
+                        <a href=''>
+                            <img className='table-dot' src='../img/listPointLight.png'/> 
+                            {unitItem.unit}
+                        </a>
+                        <table className='nav_list_drop'></table>
+                        </div>
+                         )}
+                    </div >
+                )}                    
                 </div>
             </>
         )

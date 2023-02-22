@@ -46,7 +46,6 @@ body {
 
 .menu {
   overflow-x: visible;
-
   display: flex;
   justify-content: space-between;
   align-items: center;

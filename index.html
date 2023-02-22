@@ -46,7 +46,8 @@
           another <code><a href="#subjects">subject</a></code>.</p>
           <p>Or perhaps you just want to read on some interesting tech topic in the 
           <code><a href="#blog">Blog</a></code> Section?</p>
-          
+        
+
         <div class="section-footer"></div>
       </section>
       <section class="simple" id="about">
@@ -389,7 +390,6 @@ Example of a just a little more complex call stack:
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="main.js"></script>
-    <script src="./components/data.js"></script>
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
@@ -397,9 +397,6 @@ Example of a just a little more complex call stack:
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Load our React component. -->
-    <script type="text/babel" src="./components/WelcomeBack.js"></script>
-    <script type="text/babel" src="./components/CoolButton.js"></script>
-    <script type="text/babel" src="./components/JokeGenerator.js"></script>
     <script type="text/babel" src="./components/MainTitle.js"></script>
     <script type="text/babel" src="./components/TitleAddition.js"></script>
     
@@ -408,6 +405,7 @@ Example of a just a little more complex call stack:
     
     ReactDOM.render(<MainTitle/>, document.querySelector('.main_title'));
     ReactDOM.render(<TitleAddition name=""/>, document.querySelector('.title_addition'));
+    ReactDOM.render(<JsSubjects/>, document.querySelector('.js_subjects'));
     </script>
   </body>
 </html>

@@ -85,7 +85,8 @@
           <p>Examples with Full Solutions</p>
         </div>
         <div class="section-content">
-          <div class="array_section"></div>
+          <div class="js_subjects">
+          </div>
         </div>
         <div class="section-footer"></div>
       </section>
@@ -2010,12 +2011,16 @@ console.log(os.uptime());
                   <div class="theory"></div>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
       </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../hamburger.js"></script>
+    <script src="../main.js"></script>
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -2024,13 +2029,10 @@ console.log(os.uptime());
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Load our React component. -->
-    <script type="text/babel" src="../components/ArrayComponent.js"></script>
+    <script type="text/babel" src="../components/JsSubjects.js"></script>
     <script type="text/babel">
-    ReactDOM.render(<ArrayComponent/>, document.querySelector('.array_section'));
+    ReactDOM.render(<JsSubjects/>, document.querySelector('.js_subjects'));
 
     </script>
-
-    <script src="../hamburger.js"></script>
-    <script src="../main.js"></script>
   </body>
 </html>
