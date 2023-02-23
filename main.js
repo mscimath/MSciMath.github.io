@@ -1,5 +1,5 @@
 //jQuery Smooth Scroll
-$(".navbar a").on("click", function (e) {
+$(".menu-item > a").on("click", function (e) {
   if (this.hash !== "");
   e.preventDefault();
 
