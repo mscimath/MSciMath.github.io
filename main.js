@@ -1,5 +1,5 @@
 //jQuery Smooth Scroll
-$(".menu-item > a").on("click", function (e) {
+$(".smooth-link > a").on("click", function (e) {
   if (this.hash !== "");
   e.preventDefault();
 
