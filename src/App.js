@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import JavaScript from './pages/JavaScript';
 import Physics from './pages/Physics';
@@ -26,8 +26,8 @@ function App(props) {
   
   return (
     <div className="App" id='App'>
+      <Router>
       
-      <BrowserRouter>
       <Header />
       <section id='home' className='simple'>
         
@@ -67,8 +67,7 @@ function App(props) {
 
         </div>
       </section>
-      </BrowserRouter>
-      
+      </Router>
     </div>
   );
 }
