@@ -1,0 +1,106 @@
+[  {
+    "javascript" : [
+        {
+            "postTitle": "Assigning values of one object onto another.",
+            "postLines": [
+                {"line": "var objA = {", 
+                "code": true},
+                {"line": "   age: '8',", "code": true},
+                {"line": "   city: 'Porto'", "code": true},
+                {"line": "};", "code": true},
+                {"line": "var objB ={", "code": true},
+                {"line": "   age: '6',", "code": true},
+                {"line": "   city: 'Paris',", "code": true},
+                {"line": "   experience: '1'", "code": true},
+                {"line": "};", "code": true},
+                {"line": "var objC =", "code": true},
+                {"line": "Object.assign({}, objA, objB);", "code": true},
+                {"line": "", "code": false},
+                {"line": "output: ", "code": false},
+                {"line": "{age: '6',", "code": true},
+                {"line": " city: 'Paris',", "code": true},
+                {"line": " experience: '1'}", "code": true}
+            ],
+            "postTags": "object, Object.assign(), copying objects",
+            "id": 1
+        },
+        {
+            "postTitle": "The switch statement.",
+            "postLines": [
+                {"line": "var day = 7;", "code": true},
+                {"line": "switch(day){", "code": true},
+                {"line": "   case 1:", "code": true},
+                {"line": "      document.write('Mon');", "code": true},
+                {"line": "      break;", "code": true},
+                {"line": "   case 2:", "code": true},
+                {"line": "      document.write('Tue');", "code": true},
+                {"line": "      break;", "code": true},
+                {"line": "   case 3:", "code": true},
+                {"line": "      document.write('Wed');", "code": true},
+                {"line": "      break;", "code": true},
+                {"line": "   case 4:", "code": true},
+                {"line": "      document.write('Thu');", "code": true},
+                {"line": "      break;", "code": true},
+                {"line": "   case 5:", "code": true},
+                {"line": "      document.write('Fri');", "code": true},
+                {"line": "      break;", "code": true},
+                {"line": "   case 6:", "code": true},
+                {"line": "      document.write('Sat');", "code": true},
+                {"line": "      break;", "code": true},
+                {"line": "   case 7:", "code": true},
+                {"line": "      document.write('Sun');", "code": true},
+                {"line": "Output: Sun", "code": false}
+            ],
+            "postTags": "switch, break, document.write()",
+            "id": 2
+        },
+        {
+            "postTitle": " Post",
+            "postLines": [
+                {"line": "", "code": false},
+                {"line": "", "code": true}
+            ],
+            "postTags": "",
+            "id": 3
+        },
+        {
+            "postTitle": " Post",
+            "postLines": [
+                {"line": "", "code": false},
+                {"line": "", "code": true}
+            ],
+            "postTags": "",
+            "id": 4
+        },
+        {
+            "postTitle": " Post",
+            "postLines": [
+                {"line": "", "code": false},
+                {"line": "", "code": true}
+            ],
+            "postTags": "",
+            "id": 5
+        },
+        {
+            "postTitle": " Post",
+            "postLines": [
+                {"line": "", "code": false},
+                {"line": "", "code": true}
+            ],
+            "postTags": "",
+            "id": 6
+        }
+    ],
+    "python" : [
+        {
+            "postTitle": "Python Post",
+            "postLines": [
+                {"line": "", "code": false},
+                {"line": "", "code": true}
+            ],
+            "postTags": "",
+            "id": 2
+        }
+    ]  
+  } 
+ ]
