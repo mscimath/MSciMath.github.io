@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import JavaScript from './pages/JavaScript';
 import Physics from './pages/Physics';
@@ -13,7 +13,7 @@ import Blog from './components/Blog';
 import data from './blogData.json';
 
 
-function App(props) {
+export default function App() {
   const javascriptPosts = data[0].javascript;
   const pythonPosts = data[0].python;
 
@@ -72,4 +72,3 @@ function App(props) {
   );
 }
 
-export default App;

@@ -1,7 +1,7 @@
 {
   "name": "mscimath-web",
   "version": "0.2.0",
-  "homepage": "https://mscimath.github.io",
+  "homepage": "https://mscimath.github.io/#",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
