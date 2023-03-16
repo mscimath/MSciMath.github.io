@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 
 export default function Blog({posts, input}){
     //create a new array by filtering the original one
