@@ -59,6 +59,7 @@ export default function App() {
               
             </div> 
             <Routes>
+              <Route path="/" element = {<Blog input={searchInput} posts={javascriptPosts}/>}></Route>
               <Route path='/javascript' element = {<Blog input={searchInput} posts={javascriptPosts}/>}/>
               <Route path='/python' element = { <Blog input={searchInput} posts={pythonPosts}/> } />
             </Routes>
